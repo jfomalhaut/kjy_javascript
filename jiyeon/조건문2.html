@@ -1,0 +1,48 @@
+<html>
+    <body>
+        <script>
+            var now = new Date();
+            var _yoil = now.getDay();
+            var yoil = trans(_yoil);
+            console.log(yoil);
+
+            function trans(day){
+                var y = '';
+                switch(day){
+                    case 0: {
+                        y = '일';
+                        break;    
+                    }
+                    case 1: {
+                        y = '월';
+                        //break;    
+                    }
+                    case 2: {
+                        y = '화';
+                        break;    
+                    }
+                    case 3: {
+                        y = '수';
+                        break;    
+                    }
+                    case 4: {
+                        y = '목';
+                        break;    
+                    }
+                    case 5: {
+                        y = '금';
+                        break;    
+                    }
+                    case 6: {
+                        y = '토';
+                        break;    
+                    }
+                    default: {
+                        break;
+                    }
+                }
+                return y;
+            }
+        </script>
+    </body>
+</html>

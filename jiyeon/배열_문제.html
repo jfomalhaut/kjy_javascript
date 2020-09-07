@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <button onclick= "addCart('얼갈이')">얼갈이</button>
+        <button onclick= "addCart('배추')">배추</button>
+        <button onclick= "addCart('깻잎')">깻잎</button>
+        
+
+        <script>
+            var cart = [];
+            function addCart(name){
+                var index = cart.indexOf(name);
+                if(index === -1){
+                    cart.push(name); 
+                }
+                console.log(cart);
+            }
+
+        </script>
+    </body>
+</html>
