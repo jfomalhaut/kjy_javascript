@@ -1,0 +1,43 @@
+<html>
+<body>
+	<script>
+		var yoils = ['일', '월', '화', '수', '목', '금', '토'];
+		var now = new Date();
+		var _yoil = now.getDay();
+		var yoil = trans(_yoil);
+		// console.log(yoil);
+		var result = yoils[_yoil];
+		console.log(result);
+
+		function trans(day) {
+			var y = '';
+			switch (day) {
+				case 0: {
+					return '일';
+				}
+				case 1: {
+					return '월';
+				}
+				case 2: {
+					return '화';
+				}
+				case 3: {
+					return '수';
+				}
+				case 4: {
+					return '목';
+				}
+				case 5: {
+					return '금';
+				}
+				case 6: {
+					return '토';
+				}
+				default: {
+					return '없음';
+				}
+			}
+		}
+	</script>
+</body>
+</html>
