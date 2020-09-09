@@ -1,0 +1,22 @@
+<html>
+<body>
+	<button onclick="addCart('얼갈이')">얼갈이</button>
+	<button onclick="addCart('배추')">배추</button>
+	<button onclick="addCart('깻잎')">깻잎</button>
+
+	<script>
+		var cart = [];
+
+		function addCart(item) {
+			var index = cart.indexOf(item);
+			if (index === -1) {
+				cart.push(item);
+			} else {
+				alert('이미 담겨있는 상품입니다..');
+			}
+			console.log(cart);
+		}
+		
+	</script>
+</body>
+</html>
