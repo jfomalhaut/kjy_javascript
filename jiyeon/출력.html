@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <style>
+            .container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 20px;
+                width: 500px;
+                margin: 100px 0;
+            }
+            .item {
+                line-height: 150px;
+                font-size: 50px;
+                font-weight: bold;
+                text-align: center;
+                background: #f5f5f5;
+                border: 1px solid #ddd;
+                box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1>장바구니 수량: <span id="count">0</span></h1>
+        <div id="container"></div>
+        <div class="buttons">
+            <button onclick="addCart('새우')">새우</button>
+            <button onclick="addCart('조개')">조개</button>
+            <button onclick="addCart('청어')">청어</button>
+            <button onclick="addCart('장어')">장어</button>
+            <button onclick="addCart('농어')">농어</button>
+            <button onclick="addCart('숭어')">숭어</button>
+
+        </div>
+        <script>
+            var cart = [];
+            var count = document.getElementById('count');
+            var container = document.getElementById('container');
+            var list = "", result = 0;
+            
+            function addCart(name){
+                result = cart.indexOf(name);
+                if(result === -1){
+                    cart.push(name);
+                    list = list + name;
+                    count.innerHTML = `<span>${cart.length}</span>`;
+                    container.innerHTML = `<span class="item">${list}</span>`;
+                    console.log(cart);
+                }
+                
+            }
+        </script>
+    </body>
+</html>

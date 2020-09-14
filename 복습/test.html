@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <style>
+            .container{
+                color: red;
+            }
+            .item{
+                color: greenyellow;
+            }
+            #buttonArray > button{
+                color: rebeccapurple; 
+            }
+            .container2{
+                background-color: lightgray;
+                width: 200px;
+                border: 5px solid green;
+                padding: 2px;
+                margin: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container2">
+            장바구니 담긴 갯수: <span id="sum">0</span>
+        </div>
+            
+        <div id="buttonArray">
+            <div>
+                <button onclick="addCart('수박')">수박</button><button onclick="deleteCart('수박')">X</button>
+            </div>
+            <div>
+                <button onclick="addCart('참외')">참외</button><button onclick="deleteCart('참외')">X</button>
+            </div>
+            <div>
+                <button onclick="addCart('키위')">키위</button><button onclick="deleteCart('키위')">X</button>
+            </div>
+            <div>
+                <button onclick="addCart('사과')">사과</button><button onclick="deleteCart('사과')">X</button>
+            </div>
+        </div>
+        <div id="item"></div>
+
+        <script>
+            var cart = []; //장바구니 리스트 
+            var check; //장바구니 중복 확인 변수 
+            var itemList =""; //장바구니 리스트 출력 
+            var item = document.getElementById('item');
+            var sum = document.getElementById('sum'); //장바구니 담긴 갯수
+
+            function addCart(name){
+                check = cart.indexOf(name);
+                if(check === -1){
+                    cart.push(name);
+                    printArr(cart);
+                    sum.innerHTML = cart.length;        
+                }
+                
+            }  
+
+            function deleteCart(name){
+                var i = 0, j;
+                check = cart.indexOf(name);
+                if(check !== -1){
+                    cart.splice(check, 1);
+                    printArr(cart);
+                    sum.innerHTML = cart.length;
+
+                    
+                }
+            }
+            
+            
+            function printArr(cart){
+                itemList = "";
+                if(cart.length === 0){
+                    itemList =""; 
+                    item.innerHTML = itemList;
+                }
+                //포문
+                else if(cart.length !== 0){
+                    for(var i = 0; i < cart.length; i++){
+                    itemList = itemList + cart[i];
+                    }
+                    item.innerHTML = itemList;
+                }
+                
+                
+            }
+
+        </script>
+    </body>
+</html>

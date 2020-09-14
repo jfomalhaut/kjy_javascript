@@ -1,0 +1,20 @@
+#button{
+    color: rgb(0, 0, 0);
+    background: rgb(240, 179, 161);
+    box-shadow: 0 0 1px;
+}
+header > div{
+    width: 250px;
+    background: white;
+    padding: 0 0 0 900px;
+}
+.container{
+    background: white;
+    padding: 20px;
+}
+*{
+    background: rgb(240, 179, 161);
+}
+#bold{
+    font-weight: bold;
+}
