@@ -1,0 +1,18 @@
+<html>
+<body>
+    <div id="list"></div>
+    <script>
+        var cart = ['오뎅', '귤', '감', '만두', '도라지'];
+        var list = document.getElementById('list');
+        var html ="", text ="";
+
+        for (var i = 0; i < cart.length; i++){
+            var text = `<div>${cart[i]}</div>`;
+            html = html + text;
+            console.log(text);
+            
+        }
+        list.innerHTML = html;
+    </script>
+</body>
+</html>
