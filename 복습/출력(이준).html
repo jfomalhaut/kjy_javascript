@@ -1,0 +1,102 @@
+<html>
+<head>
+	<style>
+		#item {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 20px;
+			width: 800px;
+			margin: 100px auto;
+		}
+		.item {
+			box-shadow: 0 0 15px rgba(0,0,0, .2);
+		}
+		.item div {
+			text-align: center;
+			font-size: 25px;
+			font-weight: bold;
+			padding: 30px 0;
+		}
+
+		.item button {
+			width: 100%;
+			border: none;
+			font-size: 16px;
+			padding: 5px 0;
+			outline: none;
+		}
+
+		.item .img {
+			height: 100px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+		}
+
+		.item .watermelon {
+			background-image: url('https://www.shinsegaegroupinside.com/wp-content/uploads/2020/04/%ED%8A%B9%EC%84%B1%EC%9D%B4%EB%AF%B8%EC%A7%80_534_06-3.png');
+		}
+
+		.item .melon {
+			background-image: url('https://i.pinimg.com/564x/29/cf/b5/29cfb5fc13f90e4cd1dd7746cd5a3d70.jpg');
+		}
+
+		.item .apple {
+			background-image: url('https://lh3.googleusercontent.com/proxy/OLt4tzqSvakPkM2eFDGOq7tuIQlvrxif-Z5W3yWwsAb__sqdq_3JdmRM8mv_zTrIAUiPyXEzv7h8oNw6m2kbgd3AOo7ztsVMGTvfwqSiD6lTE4X_CniRcPUb2-gv0nZh0jLASxcFJHOZ-VdO_y1WcZ1bRANJDHhoskQIaVxcnbw8Ah1SwiNBU3gpjAdO7hZSj76iqIevCbzmzRasoILts8bRr4ChD5F7MXQenjo5UtmpP7o3bu6vR-haILvpdOXpx34uyQbF_XDLEX6Xk9aEfHmpucdlJ-OP3dDkK1UCWJUeDfbFrhx0gX_g008')
+		}
+
+		.item .kiwi {
+			background-image: url('https://www.dailysecu.com/news/photo/201906/53502_45794_3555.jpg')
+		}
+
+	</style>
+</head>
+<div class="container2">
+	장바구니 담긴 갯수: <span id="sum">0</span>
+</div>
+	
+<div id="buttonArray">
+	<button onclick="addCart('watermelon')">수박</button>
+	<button onclick="addCart('melon')">참외</button>
+	<button onclick="addCart('kiwi')">키위</button>
+	<button onclick="addCart('apple')">사과</button>
+</div>
+<div id="item"></div>
+<body>
+	<script>
+		var cart = [];
+		var item = document.getElementById('item');
+		var sum = document.getElementById('sum');
+		var text = "", html = "";
+
+		function addCart(value) {
+			var index = cart.indexOf(value);
+			if (index === -1) {
+				cart.push(value);
+				print();
+			}
+		}
+
+		function deleteCart(value) {
+			var index = cart.indexOf(value);
+			cart.splice(index, 1);
+			print();
+		}
+
+		function print() {
+			html = "";
+			for (var i = 0; i < cart.length; i++) {
+				text = 
+					`<div class="item">
+						<div class="img ${cart[i]}"></div>
+						<div>${cart[i]}</div>
+						<button onclick="deleteCart('${cart[i]}')">삭제</button>
+					</div>`;
+				html = html + text;
+			}
+			sum.innerHTML = cart.length;
+			item.innerHTML = html;
+		}
+	</script>
+</body>
+</html>
