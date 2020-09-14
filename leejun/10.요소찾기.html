@@ -1,0 +1,29 @@
+<html>
+<head>
+	<style>
+		.inner {
+			color: tomato;
+			font-size: 30px;
+		}
+
+		span {
+			color: yellowgreen !important;
+		}
+	</style>
+</head>
+<body>
+	<div id="count"></div>
+	<button onclick="setNumber(0)">0</button>
+	<button onclick="setNumber(10)">10</button>
+	<button onclick="setNumber(100)">100</button>
+
+	<script>
+		var count = document.getElementById('count');
+
+		function setNumber(num) {
+			count.innerHTML = `<span class="inner">${num}</span>`;
+		}
+
+	</script>
+</body>
+</html>
