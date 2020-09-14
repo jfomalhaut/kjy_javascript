@@ -1,0 +1,50 @@
+<html>
+<head>
+	<style>
+		input[type="text"], input[type="password"] {
+			font-size: 30px;
+			margin: 10px 0;
+			padding: 10px;
+			display: block;
+			color: blue;
+		}
+		button {
+			font-size: 30px;
+		}
+	</style>
+</head>
+<body>
+	<input id="identify" type="text" placeholder="아이디를 입력하세요">
+	<input id="pwd" type="password" placeholder="비밀번호를 입력하세요">
+	<div>
+		<button id="login">로그인</button>
+	</div>
+	<script>
+
+		var identify = one('#identify');
+		var pwd = one('#pwd');
+		var login = one('#login');
+
+		function onClickLogin() {
+			alert('로그인 성공!');
+			identify.value = '';
+			pwd.value = '';
+		}
+
+		function onKeypress({ keyCode }) {
+			if (keyCode === 13) {
+				onClickLogin();
+			}
+		}
+
+		function one(element) {
+			return document.querySelector(element);
+		}
+
+		login.addEventListener('click', onClickLogin);
+		identify.addEventListener('keypress', onKeypress);
+		pwd.addEventListener('keypress', onKeypress);
+
+	</script>
+</body>
+</html>

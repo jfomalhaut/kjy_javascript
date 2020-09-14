@@ -1,0 +1,39 @@
+<html>
+<head>
+	<style>
+		#box {
+			width: 500px;
+			height: 500px;
+			background: yellowgreen;
+			cursor: pointer;
+		}
+		#box2 {
+			width: 500px;
+			height: 500px;
+			background: darkslategrey;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+	<div id="box2"></div>
+	<div id="box3"></div>
+	<script>
+		var box = document.getElementById('box');
+		var box2 = one('#box2');
+		var box3 = one('#box3');
+
+		box.onclick = function() {
+			alert('box를 클릭');
+		}
+		box2.onclick = function() {
+			alert('querySelector로 클릭하기');
+		}
+
+		function one(element) {
+			return document.querySelector(element);
+		}
+	</script>
+</body>
+</html>
