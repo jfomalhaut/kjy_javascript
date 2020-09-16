@@ -1,0 +1,35 @@
+<html>
+<body>
+	<script>
+		var numbers = [ 1, 2, 7, 4, 5 ];
+		// 3을 
+
+		var newNumber = [];
+
+		for (var i in numbers) {
+			if (numbers[i] === 7) {
+				newNumber.push(3);
+			} else {
+				newNumber.push(numbers[i]);
+			}
+		}
+
+		// 기존에 가진 배열을 변경하여 새로운 배열에 담아준다.
+
+		// console.log(newNumber);
+
+		var newNumber2 = numbers.map(function(item) {
+			if (item === 7) {
+				return 3;
+			} else {
+				return item;
+			}
+		});
+
+		var newNumber3 = numbers.map(item => item === 7 ? 3 : item);
+
+		console.log(newNumber3);
+
+	</script>
+</body>
+</html>

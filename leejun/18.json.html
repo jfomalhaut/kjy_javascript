@@ -1,9 +1,36 @@
 <html>
+<head>
+	<style>
+		#list {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 20px;
+			width: 1000px;
+			margin: 50px auto;
+		}
 
+		.item {
+			border: 1px solid #ddd;
+			box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+		}
+
+		.item .img img{
+			width: 100%;
+		}
+
+		.item div.name, .item div.price {
+			font-size: 20px;
+			padding: 8px 10px;
+			margin-bottom: 10px;
+		}
+
+	</style>
+</head>
 <body>
 	<div id="list"></div>
 	<script>
 		
+		var nf = new Intl.NumberFormat();
 		var list = one('#list');
 
 		var fishes = [
@@ -21,9 +48,30 @@
 			{ "id": 12, "name": "참가자미", "price": 19000, "src": "https://img-cf.kurly.com/shop/data/goods/1580783973108l0.jpg", "check": false}
 		];
 
-		fishes.forEach(function(item) {
-			console.log(item);
+		var newFishes = fishes.map(function(item) {
+			if (item.id === 4) {
+				return ({ ...item, price: 9999 });
+			} else {
+				return item;
+			}
 		});
+
+		var html = "", text = "";
+
+		newFishes.forEach(({ name, price, src }) => {
+			text = `
+				<div class="item">
+					<div class="img">
+						<img src="${src}" />
+					</div>	
+					<div class="name">${name}</div>
+					<div class="price">${nf.format(price)}원</div>
+				</div>
+			`;
+			html += text;
+		});
+
+		list.innerHTML = html;
 
 		function one(element) {
 			return document.querySelector(element);
