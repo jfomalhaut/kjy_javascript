@@ -1,0 +1,42 @@
+<html>
+<head>
+    <style>
+        #field{
+            width: 500px;
+            font-size: 20px;
+            padding: 10px;
+        }
+        #remainder{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>인클루드 글자 검사기<span id="remainder">50</span></h1>
+    <textarea id="field" cols="30" rows="20" max></textarea>
+    <script>
+        var field = one('#field');
+        var remainder = one('#remainder');
+
+        function one(element){
+            return document.querySelector(element);
+        }
+
+        function onKeyup(){
+            console.log(field.value);
+        }
+
+        function count(){
+            var result = 50 - field.value.length;
+            remainder.innerHTML = result;
+            if(result < 0){
+                remainder.style.color="red";
+                field.value = field.value.slice(0, 50);
+            }
+        }
+
+        field.addEventListener('keypress', count);
+        
+    </script>
+</body>
+</html>

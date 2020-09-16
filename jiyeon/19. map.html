@@ -1,0 +1,36 @@
+<html>
+<body>
+    <script>
+        var numbers = [1, 2, 7, 4, 5];
+        var numbers2 = [];
+
+        function list(){
+            for(var i = 0; i < numbers.legth; i++){
+            if(numbers[i] === 7){
+                return i;
+            }
+            }
+        }
+
+        function makeList(){
+            for(var i = 0; i < numbers.legth; i++){
+                numbers2.push(numbers[i]);
+            }
+        }
+        
+
+        var newNumber2 = numbers.map(function(item){
+            if(item === 7){
+                return 3;
+            }
+            else{
+                item;
+            }
+            return item;
+        });
+
+        console.log(newNumber2);
+
+    </script>
+</body>
+</html>

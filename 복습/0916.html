@@ -1,0 +1,15 @@
+<html>
+<body>
+    ajax();
+    <script>
+        function ajax(data){
+            var request = new XMLHTTPRequest();
+            request.addEventListener('load', function(){
+                console.log(this.responseText)
+            });
+            request.open("GET", "http://www.example.org");
+            request.send();
+        }
+    </script>
+</body>
+</html>

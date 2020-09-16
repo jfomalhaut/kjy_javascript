@@ -1,0 +1,29 @@
+<html>
+<head>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background: darkgoldenrod;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <div id="box2"></div>
+    <script>
+        var box = one('#box');
+
+        function onClickBox(){
+            alert('addEventListener click');
+        }
+
+        function one(element){
+            return document.querySelector(element);
+        }
+
+        box.addEventListener('click', onClickBox);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+<head>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <input id="id" type="text" placeholder="id">
+    <input id="pwd" type="password" placeholder="pwd">
+    <button id="login">login</button>
+    <script>
+        var id = one('#id');
+        var pwd = one('#pwd');
+        var login = one('#login');
+
+        const ID = 'test';
+        const PWD = 'pwd';
+
+        function one(element){
+            return document.querySelector(element);
+        }
+
+        function onKeypress({keyCode}){
+            if(keyCode === 13){
+                console.log(id.value, pwd.value);
+            }
+        }
+
+        function onClick(){
+            if(id.value === ID && pwd.value === PWD){
+                alert('hello');
+            }
+            else{
+                id.value = "";
+                pwd.value = "";
+            }
+        }
+
+        id.addEventListener('keypress', onKeypress);
+        pwd.addEventListener('keypress', onKeypress);
+        login.addEventListener('click', onClick);
+
+    </script>
+
+</body>
+</html>

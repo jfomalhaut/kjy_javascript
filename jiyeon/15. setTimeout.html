@@ -1,0 +1,23 @@
+<html>
+<head>
+
+</head>
+<body>
+    <button id="start">
+        <h1>Start!</h1>
+    </button>
+
+    <script>
+        const Timer = 2000;
+
+        var start = document.getElementById('start');
+        function onClickStart(){
+            setTimeout(function(){
+                document.write("<h1>시작!<h1>");
+            }, Timer);
+        }
+
+        start.addEventListener('click', onClickStart);
+    </script>
+</body>
+</html>
