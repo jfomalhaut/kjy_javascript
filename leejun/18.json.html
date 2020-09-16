@@ -3,23 +3,36 @@
 <body>
 	<div id="list"></div>
 	<script>
+		
+		var list = one('#list');
+
 		var fishes = [
-			{"id": 1,"name": "고등어","price": 2000,"type": 1,"best": true},
-			{"id": 2,"name": "삼치","price": 2100,"type": 1,"best": true},
-			{"id": 3,"name": "가자미","price": 2200,"type": 1,"best": false},
-			{"id": 4,"name": "고래","price": 2300,"type": 1,"best": true},
-			{"id": 5,"name": "꼬막","price": 2400,"type": 1,"best": false},
-			{"id": 6,"name": "사과","price": 3000,"type": 2,"best": false},
-			{"id": 7,"name": "키위","price": 3100,"type": 2,"best": true},
-			{"id": 8,"name": "딸기","price": 3200,"type": 2,"best": true},
-			{"id": 9,"name": "수박","price": 3300,"type": 2,"best": false},
-			{"id": 10,"name": "참외","price": 3400,"type": 2,"best": true},
-			{"id": 11,"name": "미나리","price": 4000,"type": 3,"best": true},
-			{"id": 12,"name": "고사리","price": 4100,"type": 3,"best": false},
-			{"id": 13,"name": "상추","price": 4200,"type": 3,"best": true},
-			{"id": 14,"name": "깻잎","price": 4300,"type": 3,"best": true},
-			{"id": 15,"name": "오이고추","price": 4400,"type": 3,"best": false}
+			{ "id": 1, "name": "영광굴비", "price": 12500, "src": "https://img-cf.kurly.com/shop/data/goods/1584496590885l0.jpg", "check": false},
+			{ "id": 2, "name": "도다리 2종", "price": 13890, "src": "https://img-cf.kurly.com/shop/data/goods/1552887814245l0.jpg", "check": false},
+			{ "id": 3, "name": "절단 코다리", "price": 21990, "src": "https://img-cf.kurly.com/shop/data/goods/1584509053186l0.jpg", "check": false},
+			{ "id": 4, "name": "물회", "price": 8900, "src": "https://img-cf.kurly.com/shop/data/goods/1554104031692l0.jpg", "check": false},
+			{ "id": 5, "name": "통영 참병어", "price": 2480, "src": "https://img-cf.kurly.com/shop/data/goods/1579245034865l0.jpg", "check": false},
+			{ "id": 6, "name": "오징어채", "price": 3590, "src": "https://img-cf.kurly.com/shop/data/goods/1583891961890l0.jpg", "check": false},
+			{ "id": 7, "name": "손질 갈치 특대", "price": 4490, "src": "https://img-cf.kurly.com/shop/data/goods/1583832125210l0.jpg", "check": false},
+			{ "id": 8, "name": "손질 갈치 대", "price": 6900, "src": "https://img-cf.kurly.com/shop/data/goods/1583830451767l0.jpg", "check": false},
+			{ "id": 9, "name": "민어굴비", "price": 12800, "src": "https://img-cf.kurly.com/shop/data/goods/1583128536523l0.jpg", "check": false},
+			{ "id": 10, "name": "부세조기", "price": 14900, "src": "https://img-cf.kurly.com/shop/data/goods/1583130217666l0.jpg", "check": false},
+			{ "id": 11, "name": "참다랑어", "price": 12800, "src": "https://img-cf.kurly.com/shop/data/goods/1582077875436l0.jpg", "check": false},
+			{ "id": 12, "name": "참가자미", "price": 19000, "src": "https://img-cf.kurly.com/shop/data/goods/1580783973108l0.jpg", "check": false}
 		];
+
+		fishes.forEach(function(item) {
+			console.log(item);
+		});
+
+		function one(element) {
+			return document.querySelector(element);
+		}
+
+		// for (var i in fishes) {
+		// 	var item = fishes[i];
+		// 	console.log(item);
+		// }
 	</script>
 </body>
 
