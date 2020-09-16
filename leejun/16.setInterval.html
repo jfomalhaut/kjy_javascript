@@ -1,0 +1,42 @@
+<html>
+<body>
+	<h1>
+		seconds : 
+		<span id="time">0</span>
+	</h1>
+	<button id="start">시작!</button>
+	<button id="stop">정지!</button>
+
+	<script>
+		var Timer = 100;
+		var time = one('#time');
+		var start = one('#start');
+		var stop = one('#stop');
+		var initialTime = 0;
+		var interval;
+
+		function onStop() {
+			clearInterval(interval);
+		}
+
+		function onStart() {
+			clearInterval(interval);
+			interval = setInterval(function() {
+				timer();
+			}, Timer);
+		}
+
+		function timer() {
+			initialTime++;
+			time.innerHTML = initialTime;
+		}
+
+		function one(element) {
+			return document.querySelector(element);
+		}
+
+		start.addEventListener('click', onStart);
+		stop.addEventListener('click', onStop);
+	</script>
+</body>
+</html>

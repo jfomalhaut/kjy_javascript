@@ -1,0 +1,41 @@
+<html>
+<head>
+	<style>
+		#field {
+			width: 500px;
+			font-size: 20px;
+			padding: 10px;
+		}
+
+		#remainder {
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+	<h1>인클루드 글자 검사기 <span id="remainder">100</span></h1>
+	<textarea id="field" cols="30" rows="10" maxlength="100"></textarea>
+	<script>
+
+		var field = one('#field');
+		var remainder = one('#remainder');
+		var maxlength = 100;
+
+		function onKeyup() {
+			remainder.innerHTML = (maxlength - field.value.length);
+			if (maxlength - field.value.length < 1) {
+				remainder.style.color = 'red';
+			} else {
+				remainder.style.color = 'blue';
+			}
+		}
+
+		function one(element) {
+			return document.querySelector(element);
+		}
+
+		field.addEventListener('keyup', onKeyup);
+
+	</script>
+</body>
+</html>
