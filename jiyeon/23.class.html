@@ -1,0 +1,48 @@
+<html>
+<head>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            border: 2px solid gray;
+            margin-bottom: 30px;
+        }
+
+        button{
+            font-size: 30px;
+        }
+
+        .black{
+            background: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <button id="add">추가</button>
+    <button id="remove">삭제</button>
+    <script>
+
+        var box = one('#box');
+        var add = one('#add');
+        var remove = one('#remove');
+
+        function one(element){
+            return document.querySelector(element);
+        }
+
+        function addClass(){
+            box.classList.add('black');
+        } 
+
+        function removeClass(){
+            box.classList.remove('black');
+        }
+
+        add.addEventListener('click', addClass);
+        remove.addEventListener('click', removeClass);
+
+
+    </script>
+</body>
+</html>

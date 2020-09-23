@@ -1,0 +1,21 @@
+<html>
+<head></head>
+<body>
+    <script>
+        var nums = [1, 2, 7, 4, 5];
+
+  
+        for(var i in nums){
+            if(nums[i] === 7){
+                nums.splice(i, 1);
+            }
+        }
+
+        console.log(nums);
+
+        var newNums2 = nums.filter(item => item !== 7);
+        console.log(newNums2);
+        
+    </script>
+</body>
+</html>

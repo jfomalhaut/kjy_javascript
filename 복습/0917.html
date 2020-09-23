@@ -1,0 +1,54 @@
+<html>
+<head>
+
+</head>
+<body>
+    <div id ='list'></div>
+    <script>
+        var list = one('#list');
+        var html = "", text = "";
+
+        var fruit = [
+            {
+                'id' : '1',
+                'name' : '사과',
+                'price' : '2000'
+            },
+            {
+                'id' : '2',
+                'name' : '참외',
+                'price' : '1000'
+            },
+            {
+                'id' : '3',
+                'name' : '키위',
+                'price' : '1500'
+            }
+        ];
+
+        function one(element){
+            return document.querySelector(element);
+        }
+
+        fruit.forEach((furit) => {
+            text = `
+            <div>
+                <span>${id}</span>
+                <span>${name}</span>
+                <span>${price}</span>
+            </div>
+            `;
+
+            html = html + text;
+        });
+
+        function print(){
+            console.log('hello');
+            list.innerHTML = html;
+        }
+
+        print();
+
+    </script>
+</body>
+</html>

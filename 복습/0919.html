@@ -1,0 +1,33 @@
+<html>
+<head>
+    <style>
+        #remainder{
+            color : blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>남은 글자 수: <span id='remainder'>50</span></h1>
+    <textarea id="text" cols="50" rows="20" maxlength="50"></textarea> 
+    <script>
+        var remainder = one('#remainder');
+        var text = one('#text');
+
+        function one(element){
+            return document.querySelector(element);
+        }
+
+        function countText(){
+            console.log(text.value.length);
+            remainder.innerHTML = 50 - text.value.length;
+            if(text.value.length === 50){
+                remainder.style.color = 'red';
+            }
+        }
+
+
+        text.addEventListener('keyup', countText);
+
+    </script>
+</body>
+</html>

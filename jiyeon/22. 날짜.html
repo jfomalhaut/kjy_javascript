@@ -1,0 +1,30 @@
+<html>
+<head></head>
+<body>
+    <script>
+
+        var today = new Date();
+        var year = today.getFullYear();
+        var month = today.getMonth() + 1; //달만 1을 더해준다
+        var date = today.getDate();
+        var day = today.getDay();
+
+        function make(num){
+            if(num >= 10){
+                return num;
+            }
+            else{
+                return '0' + num;
+            }
+        }
+
+
+        var hour = today.getHours();
+        var min = today.getMinutes();
+        var sec = today.getSeconds();
+
+        var nowText = `${make(year)}-${make(month)}-${make(date)} ${make(hour)}:${make(min)}:${make(sec)}`;
+        console.log(nowText);
+    </script>
+</body>
+</html>

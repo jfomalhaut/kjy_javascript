@@ -1,0 +1,27 @@
+<html>
+<head></head>
+<body>
+    <script>
+        var nums = [1, 2, 3, 4, 5];
+        const newNums = nums.concat(6);
+
+        console.log(newNums);
+
+        var nums2 = [6, 7, 8, 9];
+
+        const newNums2 = nums.concat(nums2);
+
+        const newNums3 = [...nums, ...nums2];
+        console.log(newNums3);
+
+        const player = {
+            name: '메시',
+            number: 10,
+            team: '바르셀로나'
+        };
+
+        const newPlayer = {...player, number: 20, team:'레알 마드리드'};//덮어씌운다 
+        console.log(newPlayer);
+    </script>
+</body>
+</html>
