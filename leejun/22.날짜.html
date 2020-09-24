@@ -1,0 +1,22 @@
+<html>
+<body>
+	<script>
+		var now = new Date();
+		var year = now.getFullYear();
+		var month = now.getMonth() + 1;
+		var date = now.getDate();
+		var day = now.getDay();
+		
+		var hour = now.getHours();
+		var min = now.getMinutes();
+		var sec = now.getSeconds();
+
+		function setZero(num) {
+			return num < 10 ? "0" + num : num;
+		}
+
+		var nowText = `${year}-${setZero(month)}-${setZero(date)} ${hour}:${min}:${sec}`;
+		console.log(nowText);
+	</script>
+</body>
+</html>

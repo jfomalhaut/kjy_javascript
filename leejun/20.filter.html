@@ -1,0 +1,31 @@
+<html>
+
+<body>
+	<script>
+		// var items = [
+		// 	{ id: 1, name: 'name1', price: 1000 },
+		// 	{ id: 2, name: 'name2', price: 2000 },
+		// 	{ id: 3, name: 'name3', price: 3000 },
+		// 	{ id: 4, name: 'name4', price: 4000 },
+		// ];
+
+		var nums = [1, 2, 7, 4, 5];
+		var newNums = [];
+		var item;
+
+		for (var i in nums) {
+			item = nums[i];
+			if (item !== 7) {
+				newNums.push(item);
+			}
+		}
+
+		
+		const newNums2 = nums.filter(item => item !== 7);
+		console.log(newNums2);
+
+
+	</script>
+</body>
+
+</html>
