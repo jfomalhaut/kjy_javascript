@@ -1,0 +1,129 @@
+<html>
+<head>
+	<style>
+		* { margin: 0; padding: 0;}
+		body {
+			background: #f0f0f0;
+		}
+		header {
+			height: 100px;
+			background: white;
+			border-bottom: 1px solid #ddd;
+		}
+		nav {
+			float: right;
+			height: 100px;
+			/* background: yellowgreen; */
+			padding: 0 30px;
+			box-sizing: border-box;
+		}
+		span {
+			margin-top: 35px;
+			width: 80px;
+			border: 1px solid;
+			float: left;
+			text-align: center;
+			line-height: 30px;
+			height: 30px;
+			box-sizing: border-box;
+			background: #f9f9f9;
+			margin-right: 10px;
+			cursor: pointer;
+			user-select: none;
+		}
+		span:last-child {
+			margin-right: 0px;
+		}
+		span:active {
+			transform: scale(0.98);
+		}
+		span:hover {
+			background: #eaeaea;
+			font-weight: bold;
+		}
+		.logo {
+			float: left;
+			font-size: 80px;
+			font-weight: bold;
+			line-height: 100px;
+			color: #444;
+			padding: 0 1vw;
+		}
+
+		main {
+			margin-top: 10px;
+			background: white;
+			padding: 10px 0;
+			border-bottom: 1px solid #ddd;
+			border-top: 1px solid #ddd;
+		}
+		section {
+			overflow: hidden;
+			/* margin-top: 20px; */
+			margin-bottom: 20px;
+			box-sizing: border-box;
+			padding: 0 10px;
+		}
+		section .img {
+			float: left;
+			height: 250px;
+			width: 250px;
+			background-color: #f9f9f9;
+			background-image: url('https://t1.daumcdn.net/cfile/blog/2704793A59092A3A04');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+		section .info {
+			float: left;
+		}
+		section:last-child {
+			margin-bottom: 0;
+		}
+
+		footer {
+			margin-top: 10px;
+			background: white;
+			text-align: center;
+			padding: 10px 0;
+			font-size: 20px;
+			border-bottom: 1px solid #ddd;
+			border-top: 1px solid #ddd;
+		}
+		footer .insta {
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="logo">CSS</div>
+		<nav>
+			<span>홈</span>
+			<span>자기소개</span>
+			<span>내사진</span>
+			<span>몇시예요</span>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<div class="img"></div>
+			<div class="info">
+				<div class="date">2019.09.21</div>
+				<div class="desc">냇가에서 찍은 사진</div>
+			</div>
+		</section>
+		<section>
+			<div class="img"></div>
+			<div class="info">
+				<time datetime="2019-09-21" class="date">2019.09.21</time>
+				<div class="desc">냇가에서 찍은 사진</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div class="insta">dlwns</div>
+		<email class="email">dlwns@nate.com</email>
+	</footer>
+</body>
+</html>
