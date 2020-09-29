@@ -1,0 +1,105 @@
+<html>
+<head>
+    <style>
+        *{margin: 0; padding: 0;}
+
+        header{
+            margin: 5px;
+            height: 100px;
+            background: lightgray;
+        }
+        .logo{
+            font-size: 50px;
+            font-weight: bold;
+            float: left;
+            height: 100px;
+            line-height: 100px;
+            margin-left: 20px;
+        }
+
+        .menu{
+            margin-right: 20px;
+            height: 100px;
+            line-height: 100px;
+            box-sizing: border-box;
+            float: right;
+            padding-top: 15px;
+        }
+        .menu > span{
+            font-weight: bold;
+            border-radius: 5px;
+            border: 2px solid;
+            font-size: 20px;
+            height: 20px;
+            line-height: 20px;
+            margin-right: 10px;
+        }
+
+        main{
+            min-height: calc(100vh - 200px);
+            background: lightgray;
+            margin: 5px;
+            box-sizing: border-box;
+        }
+
+
+        main > section{
+            padding:10px;
+            float: left;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+        
+        .photo{
+            background: skyblue;
+            height: 200px;
+            width: 200px;
+            float: left;
+        }
+        
+        .info{
+            float: left;
+            margin-left: 10px;
+        }
+
+        footer{
+            background: lightgray;
+            margin: 5px;
+            text-align: center;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class='logo'>CSS</div>
+        <nav class='menu'>
+            <span>home</span>
+            <span>intro</span>
+            <span>photo</span>
+            <span>time</span>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class='photo'></div>
+            <div class='info'>
+                <div>2019.09.21</div>
+                <div>냇가에서 찍은 사진</div>
+            </div>
+        </section>
+        <section>
+            <div class='photo'></div>
+            <div class='info'>
+                <div>2019.09.21</div>
+                <div>냇가에서 찍은 사진</div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>wldus</div>
+        <div>wldus@naver.com</div>
+    </footer>
+</body>
+</html>
