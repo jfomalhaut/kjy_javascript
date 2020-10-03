@@ -1,0 +1,70 @@
+<html>
+<head>
+    <style>
+        #egg > img, #apple > img, #orange > img, #melon > img{
+            border: 1px solid;
+            display: block;
+        }
+        #egg, #apple, #orange, #melon{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    장바구니 담긴 갯수:<span class='count'>0</span>개
+    <div>장바구니:<span class='cart'></span></div>
+     <div>
+         <div id='egg'>
+            <img src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F253E815055C44EF31A" width=300px height=300px>
+            <button onClick="addCart('egg')">추가</button>
+            <button onClick="removeCart('egg')">삭제</button>
+         </div>
+         <div id='apple'>
+            <img src="https://lh3.googleusercontent.com/proxy/O1kkPQhhgiu4z8uN4rt7AL57aPedtMzs66pLgjrhpaGq8vKGthq5I0Sgw8Wx-HEWacAHG54ItYl2b1jONTbheQZIyD_8J2JuiXyTqe78ZKiKcZEg" width=300px height=300px>
+            <button onClick="addCart('apple')">추가</button>
+            <button onClick="removeCart('apple')">삭제</button>
+         </div>
+         <div id='orange'>
+            <img src="https://lh3.googleusercontent.com/proxy/CLwZaSLvWHoaf1Qw6UCoILUuK67YU7_WwBl5RsvXLXKZ30UVtZjpmMhiETbf85Ll--hDCBrXHDO6WWhGKxD3VdWV0IDkmBXO4vClbYAgUvtLPdMOoHEcwg_lh5dd_0bY4WsXhRfAnKnvmXgmqf4_p2D3p7pqyBOx8h6VCz7Tu_4qwpsXAHM" width=300px height=300px>
+            <button onClick="addCart('orange')">추가</button>
+            <button onClick="removeCart('ornage')">삭제</button>
+         </div>
+         <div id='melon'>
+            <img src="https://mindgil.com/up_fd/wc_news/2020-06/simg_org/shutterstock_1422071948.jpg" width=300px height=300px>
+            <button onClick="addCart('melon')">추가</button>
+            <button onClick="removeCart('melon')">삭제</button>
+         </div>
+     </div>
+    <script>
+        var count = one('.count');
+        var cart = one('.cart');
+        var index;
+
+        var cartList = [];
+
+        function one(element){
+            return document.querySelector(element);
+        }
+
+        function addCart(element){
+            index = cartList.indexOf(element);
+            if(index === -1){
+                cartList.push(element);
+                count.innerHTML = cartList.length;
+                cart.innerHTML = cartList;
+            } 
+        }
+
+        function removeCart(element){
+            index = cartList.indexOf(element);
+            if(index !== -1){
+                cartList.splice(index, 1);
+                count.innerHTML = cartList.length;
+                cart.innerHTML = cartList;
+            } 
+        }
+
+
+    </script>
+</body>
+</html>
