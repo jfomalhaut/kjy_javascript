@@ -52,9 +52,13 @@
         var nextBtn = one('#next');
         var banners = all('.banner');
         var index = 0;
-
+        
         function one(element){
             return document.querySelector(element);
+        }
+        
+        function all(element){
+            return document.querySelectorAll(element);
         }
         
         function onClickNext(){
@@ -67,9 +71,6 @@
             banners[index].classList.add('active');
         }
 
-        function all(element){
-            return document.querySelectorAll(element);
-        }
 
         nextBtn.addEventListener('click', onClickNext);
 
