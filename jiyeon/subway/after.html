@@ -1,0 +1,54 @@
+<html>
+<head>
+	<style>
+		* { margin: 0; padding: 0; }
+		li { list-style: none;}
+
+		ul {
+			height: 50px;
+			float: right;
+		}
+		li {
+			/* width: 150px; */
+			padding: 0 20px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			float: left;
+			position: relative;
+			cursor: pointer;
+			user-select: none;
+		}
+		li:after {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 50%;
+			height: 20px;
+			width: 2px;
+			margin-top: -10px;
+			background: lightgray;
+		}
+
+		li:last-child:after {
+			display: none;
+		}
+
+		li:hover {
+			color: green;
+		}
+
+		li:nth-child(odd) {
+			/* background: yellowgreen; */
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>클래식</li>
+		<li>프래쉬&라이트</li>
+		<li>프리미엄</li>
+		<li>아침메뉴</li>
+	</ul>
+</body>
+</html>

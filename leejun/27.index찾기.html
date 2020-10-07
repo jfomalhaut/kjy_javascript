@@ -1,0 +1,54 @@
+<html>
+<head>
+	<style>
+		.container {
+			display: flex;
+			width: 1000px;
+			justify-content: space-between;
+		}
+		.box {
+			flex-grow: 1;
+			height: 200px;
+			background: lightgray;
+			margin: 0 20px;
+			cursor: pointer;
+			transition: .3s;
+		}
+		.box:hover {background: darkgray;}
+		.active { background: #444; flex-grow: 2; }
+		.active:hover {background: #444;}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box active"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+	</div>
+	<script>
+		var boxes = all('.box');
+
+		function onClickEvent(element, idx) {
+			removeClassAll();
+			element.classList.add('active');
+		}
+
+		function removeClassAll() {
+			boxes.forEach((element, idx) => {
+				element.classList.remove('active');
+			});
+		}
+
+		boxes.forEach((element, idx) => {
+			element.addEventListener('click', function() {
+				onClickEvent(element, idx);
+			});
+		})
+
+		function all(element) {
+			return document.querySelectorAll(element);
+		}
+	</script>
+</body>
+</html>
