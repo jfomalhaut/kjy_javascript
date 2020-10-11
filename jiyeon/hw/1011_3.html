@@ -1,0 +1,104 @@
+<!--bullet-->
+<html>
+<head>
+    <style>
+        *{margin: 0; padding: 0}
+
+        .container{
+            position: relative;
+        }
+
+        .img{
+            width: 100%;
+            height: 400px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: absolute;
+            opacity: 0;
+            transition: .4s;
+        }
+        .img:nth-child(1){
+            background-image: url(https://www.subway.co.kr/upload/banner/main_PC_1920x440_20201007112359990.jpg);
+        }
+        .img:nth-child(2){
+            background-image: url(https://www.subway.co.kr/upload/banner/main_PC_1920x440_20201006110308039.jpg);
+        }
+        .img:nth-child(3){
+            background-image: url(https://www.subway.co.kr/upload/banner/main_PC_1920x440_20201006110232887.jpg);
+        }
+        .img:nth-child(4){
+            background-image: url(https://www.subway.co.kr/upload/banner/main_PC_1920x440_20201006110138284.jpg);
+        }
+
+        .btns{
+            position: absolute;
+            margin-top: 370px;
+            margin-left: 80%;
+        }
+        .btn{
+            margin-left: 5px;
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: red;
+            border-radius: 8px;
+            transition: .3s;
+        }
+        .imgActive{
+            opacity: 1;
+        }
+
+        .btnActive{
+            width: 40px;
+            background: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class='container'>
+        <div class='imgs'>
+            <div class='img imgActive'></div>
+            <div class='img'></div>
+            <div class='img'></div>
+            <div class='img'></div>
+        </div>
+        <div class='btns'>
+            <div class='btn btnActive'></div>
+            <div class='btn'></div>
+            <div class='btn'></div>
+            <div class='btn'></div>
+        </div>
+    </div>
+    <script>
+        var imgs = all('.img');
+        var btns = all('.btn');
+        var previousIdx = 0;
+
+        function all(element){
+            return document.querySelectorAll(element);
+        }
+
+        btns.forEach((element, idx) => {
+            element.addEventListener('click', function(){
+                onClick(element, idx);
+            });
+        })
+
+        function onClick(element, idx){
+            removeAll();
+            imgs[previousIdx].classList.remove('imgActive');
+            element.classList.add('btnActive');
+            imgs[idx].classList.add('imgActive');
+            previousIdx = idx;
+        }
+
+        function removeAll(){
+            btns.forEach((element, idx) => {
+                element.classList.remove('btnActive');
+            });
+        }
+
+    </script>
+</body>
+</html>

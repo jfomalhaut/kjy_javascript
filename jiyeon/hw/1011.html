@@ -1,0 +1,85 @@
+<!-- previoius 이전 버튼 추가-->
+<html>
+<head>
+    <style>
+        *{margin: 0; padding: 0;}
+
+        .imgs{
+            position: relative;
+            width: 100%;
+            height: 400px;
+        }
+
+        .img{
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: center center;
+            opacity: 0;
+            width: 100%;
+            height: 400px;
+        }
+        .img:nth-child(1){
+            background-image: url(https://www.subway.co.kr/upload/banner/main_PC_1920x440_20201007112359990.jpg);
+        }
+        .img:nth-child(2){
+            background-image: url(https://www.subway.co.kr/upload/banner/main_PC_1920x440_20201006110308039.jpg);
+        }
+        .img:nth-child(3){
+            background-image: url(https://www.subway.co.kr/upload/banner/main_PC_1920x440_20201006110232887.jpg);
+        }
+        .img:nth-child(4){
+            background-image: url(https://www.subway.co.kr/upload/banner/main_PC_1920x440_20201006110138284.jpg);
+        }
+        .active{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class='imgs'>
+        <div class='img active'></div>
+        <div class='img'></div>
+        <div class='img'></div>
+        <div class='img'></div>
+    </div>
+    <button class='nextBtn'>next</button>
+    <button class='previousBtn'>previous</button>
+
+    <script>
+        var imgs = all('.img');
+        var nextBtn = one('.nextBtn');
+        var previousBtn = one('.previousBtn');
+        var index = 0;
+        var max = imgs.length;
+
+        function one(element){
+            return document.querySelector(element);
+        }
+        function all(element){
+            return document.querySelectorAll(element);
+        }
+
+        function onNextClick(){
+            console.log('next');
+            imgs[index].classList.remove('active');
+            index ++;
+            index = index % max;
+            imgs[index].classList.add('active');
+        }
+
+        function onPreviousClick(){
+            console.log('previous');
+            imgs[index].classList.remove('active');
+            index --;
+            if(index === -1){
+                index = 3;
+            }
+            imgs[index].classList.add('active');
+        }
+
+        nextBtn.addEventListener('click', onNextClick);
+        previousBtn.addEventListener('click', onPreviousClick);
+
+    </script>
+</body>
+</html>
