@@ -11,7 +11,7 @@
         init();
 
         var productId = getKey('productId') * 1;
-        const item = pdt.filter(item => item.id === productId)[0];
+        const item = pdt.filter(item => item.id === productId)[0]; 
         const container = one('#container');
 
         container.innerHTML = `
@@ -29,6 +29,9 @@
 
         function init(){
             var pageUrl = window.location.search.substring(1);
+            if(!pageUrl){
+                window.location.href='28. 마켓컬리.html';
+            }
             console.log(pageUrl);
             var _params = pageUrl.split('&');
             var row;
@@ -38,10 +41,7 @@
                 params[row[0]] = row[1];
             });
         }
-        
 
-        
-        
         console.log(item);
 
         function getKey(key){

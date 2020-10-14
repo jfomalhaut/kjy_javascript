@@ -28,11 +28,22 @@
             font-size: 17px;
             color: darkred;
         }
+
+        #container .item button{
+            width: 100%;
+            background: #6335a8;
+            color: white;
+            border: none;
+            line-height: 50px;
+            font-size: 20px;
+            
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>장바구니: <b id='count'>0</b></h1>
+        <a href='30. 장바구니.html'>장바구니 가기</a>
     </header>
     <section id='container'></section>
     <script src='js/items.js'></script>
@@ -41,11 +52,16 @@
         const count = document.querySelector('#count');
         const container = document.querySelector('#container');
         const nf = new Intl.NumberFormat();
-
+        
+        var cartList =[];
         let txt = "", html = "";
         print();
 
         function print(){
+                var localCart = localStorage.getItem('cartList');
+                cartList = localCart ? localCart.split(',').map(item => item *1) : [];
+                console.log(cartList);
+                count.innerHTML = cart.length;
                 pdt.forEach((element, item) => {
                 // var ePrice = getEvent(element, item);
                 // if(ePrice === 0){
@@ -61,30 +77,49 @@
                     <div class='img'>
                         <img src='img2/${element.src}'>
                     </div>
-                </a>
+                    </a>
                     <div class='info'>
                         <div class='name'>${element.name}</div>
                         <div class='price'>
                             <span class='price'>${nf.format(element.price)}원</span>
                             ${(element.price === element.event) ? '' : getEvent(element.price, element.event)}
                         </div>
+                        <button class='cart' onclick='addCart(${element.id})'>담기</button>
                     </div>
                 </div>
             `;
 
             html += txt;
             });
+            container.innerHTML = html;
         }
 
         function getEvent(price, event){
             var result = (price / event) * 100;
-
             return `<span class='event'>${Math.ceil(result) - 100}%</span>`;
         }
 
-        
+        function addCart(id){
+            var result = cartList.indexOf(id);
+            if(result === -1){
+                cartList.push(id);
+                const cartString = cartList.join(); //기본값 ',' 문자열로 만들어준다 
+                localStorage.setItem('cartList', cartString); //키값 value
+                console.log(cartString);
+            }
+        }
 
-        container.innerHTML = html;
+        // var cart = document.querySelectorAll('.cart');
+
+        // cart.forEach((element, item) => {
+        //     element.addEventListener('click', function(){
+        //         cartList.push(item);
+        //         console.log(item);
+        //     });
+        // });
+
+        
+        // cartList.innerHTML = cartList;
         
     </script>
 </body>

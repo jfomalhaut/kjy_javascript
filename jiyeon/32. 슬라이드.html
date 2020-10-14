@@ -1,0 +1,95 @@
+<html>
+<head>
+    <style>
+        .container{
+            width: 400px;
+            height: 300px;
+            position: relative;
+            border: 1px solid;
+            margin: 100px auto;
+        }
+
+        #wrapper{
+            position: absolute;
+            left: 0; top: 0;
+            transition: .3s;
+            height: 300px;
+            display: flex;
+        }
+
+        .slide{
+            width: 400px;
+            flex-shrink: 0;
+            font-size: 100px;
+            color: white;
+            line-height: 300px;
+            text-align: center;
+        }
+
+        .slide:nth-child(1){background: tomato;}
+        .slide:nth-child(2){background: yellowgreen;}
+        .slide:nth-child(3){background: deepskyblue;}
+        .slide:nth-child(4){background: darkorange;}
+        .slide:nth-child(5){background: darkviolet;}
+
+    </style>
+</head>
+<body>
+    <div class='container'>
+        <div id='wrapper'>
+            <div class="slide">1</div>
+            <div class="slide">2</div>
+            <div class="slide">3</div>
+            <div class="slide">4</div>
+            <div class="slide">5</div>
+        </div>
+    </div>
+    <button id='next'>다음</button>
+    <button id='previous'>이전</button>
+    <script>
+
+        const next = one('#next');
+        const wrapper = one('#wrapper');
+        let index = 0;
+        const slide = all('.slide');
+        const length = slide.length;
+        const slideWidth = slide[0].offsetWidth;
+        const previous = one('#previous');
+
+        console.log(slideWidth);
+
+        function one(element){
+            return document.querySelector(element);
+        }
+
+        function all(element){
+            return document.querySelectorAll(element);
+        }
+
+        function nextSlide(){
+            if(index !== 4){
+                // wrapper.style.left = wrapper.style.left;
+                index++;
+                var position = -(index * slideWidth);
+                wrapper.style.left = position + 'px';
+            }
+           
+        }
+
+        function previousSlide(){
+            if(index === 0){
+                wrapper.style.left = wrapper.style.left;
+            }
+            else{
+                index--;
+                var position = -(index * slideWidth);
+                wrapper.style.left = position;
+            }
+        }
+
+        previous.addEventListener('click', previousSlide);
+        next.addEventListener('click', nextSlide);
+
+    </script>
+</body>
+</html>
