@@ -1,0 +1,20 @@
+<html>
+<body>
+	<script>
+		var answer = 0;
+
+
+		var result = test(567895678);
+		console.log(result);
+		
+		function test(n) {
+			var _n = n + "";
+			var length = _n.length;
+			for (var i = 0; i < length; i++) {
+				answer += _n[i] * 1;
+			}
+			return answer;
+		}
+	</script>
+</body>
+</html>

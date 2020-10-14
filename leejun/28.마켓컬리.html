@@ -1,0 +1,93 @@
+<html>
+<head>
+	<style>
+		#container {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 20px;
+			width: 900px;
+			margin: 50px auto;
+		}
+
+		#container .item {
+			box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+		}
+
+		#container .item img {
+			width: 100%;
+		}
+
+		#container .item .info {
+			padding: 10px;
+		}
+
+		#container .item .info .name {
+			font-size: 20px;
+			line-height: 32px;
+			color: #000;
+		}
+
+		#container .item .info .price {
+			font-size: 17px;
+			line-height: 25px;
+			font-weight: bold;
+			color: #444;
+		}
+		
+		#container .item .info .event {
+			font-size: 17px;
+			line-height: 25px;
+			font-weight: bold;
+			color: #6335a8;
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<header>
+		<h1>장바구니 : <b id="count">0</b></h1>
+	</header>
+	<section id="container"></section>
+
+	<script src="js/items.js"></script>
+	<script>
+		const count = document.querySelector('#count');
+		const container = document.querySelector('#container');
+		const nf = new Intl.NumberFormat();
+		let text = "", html = "";
+
+		print();
+
+		function print() {
+			pdt.forEach((element, index) => {
+				txt = `
+					<div class="item">
+						<a href="29.마켓컬리상세보기.html?productId=${element.id}&price=${element.price}">
+							<div class="img">
+								<img src="img2/${element.src}">
+							</div>
+						</a>
+						<div class="info">
+							<div class="name">${element.name}</div>
+							<div class="price">
+								<span>${nf.format(element.price)}원</span>
+								${element.event < element.price ? getEvent(element.event, element.price) : ''}
+							</div>
+						</div>
+					</div>
+				`;
+				html += txt;
+			});
+			container.innerHTML = html;
+		}
+
+		function getEvent(event, price) {
+			var percent = Math.round((price - event) / price * 100);
+			return `<span class="event">${nf.format(event)}원(-${percent}%)</span>`;
+		}
+
+	</script>
+</body>
+</html>

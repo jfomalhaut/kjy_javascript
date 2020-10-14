@@ -1,0 +1,50 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+<body>
+	<div id="container"></div>
+	<script src="js/items.js"></script>
+	<script>
+		var params = {};
+		init();
+
+		var productId = getKey('productId') * 1;
+		const item = pdt.filter(item => item.id === productId)[0];
+		const container = one('#container');
+
+		container.innerHTML = `
+			<div class="item">
+				<div class="img">
+					<img src="img2/${item.src}">
+				</div>
+				<div class="info">
+					<h1 class="name">${item.name}</h1>
+					<h1 class="price">${item.price}</h1>
+					<p class="desc">${item.desc}</p>
+				</div>
+			</div>
+		`;
+
+		function init() {
+			var pageUrl = window.location.search.substring(1);
+			var _params = pageUrl.split('&');
+			var row;
+
+			_params.forEach((element, index) => {
+				row = element.split('=');
+				params[row[0]] = row[1];
+			});
+		}
+
+		function getKey(key) {
+			return params[key];
+		}
+
+		function one(element) {
+			return document.querySelector(element);
+		}
+
+	</script>
+</body>
+</html>
