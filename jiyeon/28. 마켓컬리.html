@@ -1,0 +1,91 @@
+<html>
+<head>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            width: 800px;
+            margin: 50px auto;
+        }
+
+        #container .item{
+            box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+        }
+
+        #container .item img{
+            width: 100%;
+        }
+
+        #container .item .info .name{
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+            line-height: 32px;
+        }
+
+        #container .item .info .price{
+            font-size: 17px;
+            color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>장바구니: <b id='count'>0</b></h1>
+    </header>
+    <section id='container'></section>
+    <script src='js/items.js'></script>
+    <script>
+
+        const count = document.querySelector('#count');
+        const container = document.querySelector('#container');
+        const nf = new Intl.NumberFormat();
+
+        let txt = "", html = "";
+        print();
+
+        function print(){
+                pdt.forEach((element, item) => {
+                // var ePrice = getEvent(element, item);
+                // if(ePrice === 0){
+                //     ePrice = '';
+                // }
+                // else{
+                //     ePrice = ePrice + '%';
+                // }
+
+                txt = `
+                <div class='item'>
+                    <a href='29.마켓컬리상세보기.html?productId=${element.id}&price=${element.price}'>
+                    <div class='img'>
+                        <img src='img2/${element.src}'>
+                    </div>
+                </a>
+                    <div class='info'>
+                        <div class='name'>${element.name}</div>
+                        <div class='price'>
+                            <span class='price'>${nf.format(element.price)}원</span>
+                            ${(element.price === element.event) ? '' : getEvent(element.price, element.event)}
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            html += txt;
+            });
+        }
+
+        function getEvent(price, event){
+            var result = (price / event) * 100;
+
+            return `<span class='event'>${Math.ceil(result) - 100}%</span>`;
+        }
+
+        
+
+        container.innerHTML = html;
+        
+    </script>
+</body>
+</html>
