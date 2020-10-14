@@ -1,0 +1,10 @@
+<html>
+<body>
+	<script>
+		var arr = [1,2,3,4,5];
+		var stringArr = arr.map(item => '('+item+")").join();
+		var querySQL = `insert into test(data) values${stringArr}`;
+		console.log(querySQL);
+	</script>
+</body>
+</html>
