@@ -41,26 +41,50 @@
 			color: #6335a8;
 		}
 
-
+		#container .item button {
+			width: 100%;
+			background: #6335a8;
+			color: white;
+			line-height: 50px;
+			font-size: 20px;
+			border: none;
+		}
 
 	</style>
 </head>
 <body>
 	<header>
-		<h1>장바구니 : <b id="count">0</b></h1>
+		<h1>장바구니 : <b id="count">Loading....</b></h1>
+		<a href="30.장바구니.html">장바구니 가기</a>
 	</header>
 	<section id="container"></section>
 
 	<script src="js/items.js"></script>
 	<script>
+		let text = "", html = "";
 		const count = document.querySelector('#count');
 		const container = document.querySelector('#container');
 		const nf = new Intl.NumberFormat();
-		let text = "", html = "";
+		let cart = [];
 
+		
 		print();
 
+		function addCart(id) {
+			var index = cart.indexOf(id);
+			if (index === -1) {
+				cart.push(id);
+				count.innerHTML = cart.length;
+				const cartString = cart.join();
+				localStorage.setItem('cart', cartString);
+			}
+		}
+
 		function print() {
+			var localCart = localStorage.getItem('cart');
+			cart = localCart ? localCart.split(',').map(item => item * 1) : [];
+			count.innerHTML = cart.length;
+
 			pdt.forEach((element, index) => {
 				txt = `
 					<div class="item">
@@ -76,6 +100,7 @@
 								${element.event < element.price ? getEvent(element.event, element.price) : ''}
 							</div>
 						</div>
+						<button class="cart" onclick="addCart(${element.id})">담기</button>
 					</div>
 				`;
 				html += txt;
@@ -86,6 +111,10 @@
 		function getEvent(event, price) {
 			var percent = Math.round((price - event) / price * 100);
 			return `<span class="event">${nf.format(event)}원(-${percent}%)</span>`;
+		}
+
+		function all(element) {
+			return document.querySelectorAll(element);
 		}
 
 	</script>

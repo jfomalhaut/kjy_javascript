@@ -28,6 +28,9 @@
 
 		function init() {
 			var pageUrl = window.location.search.substring(1);
+			if (!pageUrl) {
+				window.location.href = "28.마켓컬리.html";
+			}
 			var _params = pageUrl.split('&');
 			var row;
 
