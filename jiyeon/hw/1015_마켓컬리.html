@@ -1,0 +1,82 @@
+<html>
+<head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            width: 900px;
+            margin: 50px auto;
+        }
+
+        img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>장바구니: <b id='count'>0</b></div>
+    <a href='1015_장바구니.html'>장바구니 가기</a>
+    <section class='container'></section>
+    <script src='js/items.js'></script>
+    <script>
+        var container = document.querySelector('.container');
+        var count = document.getElementById('count');
+        var cart = [];
+        var txt = '', html = '';
+
+        print();
+
+        function print(){
+            var localCart = localStorage.getItem('cart');
+            cart = localCart ? localCart.split(',').map(item => item * 1) : [];
+            count.innerHTML = cart.length;
+            
+            pdt.forEach((element, idx) =>{
+                txt = `
+                <div class='item'>
+                    <a href='1015_상품상세페이지.html?productId=${element.id}&price=${element.price}'>
+                        <div class='img'>
+                            <img src='img2/${element.src}'>
+                        </div>
+                    </a>
+                    <div class='info'>
+                        <div class='name'>${element.name}</div>
+                        <div>
+                            <span id='price'>${element.price}</span>
+                            ${element.price === element.event ? '' : getEvent(element.price, element.event)}
+                        </div>
+                        <button class='btn' onClick='addCart(${element.id})'>담기</button>
+                    </div>
+                </div>
+                `;
+                html += txt;
+            });
+            
+            container.innerHTML = html;
+        }
+
+        function getEvent(price, event){
+            return Math.ceil(price / event * 100 - 100) + '%';
+        }
+
+        function addCart(item){
+            console.log(item);
+            var result = cart.indexOf(item);
+            var _item = item * 1;
+            if(result === -1){
+                cart.push(_item);
+                console.log(cart);
+                count.innerHTML = cart.length;
+                var cartString = cart.join();
+                localStorage.setItem('cart', cartString);
+            }
+        }
+    </script>
+</body>
+</html>

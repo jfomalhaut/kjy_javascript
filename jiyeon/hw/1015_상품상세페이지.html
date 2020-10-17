@@ -1,0 +1,56 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+<body>
+    <div class='container'></div>
+    <script src='js/items.js'></script>
+    <script>
+        var container = document.querySelector('.container');
+        var params ={};
+        
+        init();
+
+        var productId = getKey('productId') * 1;
+        const item = pdt.filter(item => item.id === productId)[0];
+        console.log(item);
+
+        printItem(item);
+        
+
+        function init(){
+            var pageUrl = window.location.search.substring(1);
+
+            if(!pageUrl){
+                window.location.href='1015_마켓컬리.html';
+            }
+
+            var _params = pageUrl.split('&');
+            _params.forEach((element, idx) => {
+                var row = element.split('=');
+                params[row[0]] = row[1];
+            })
+        }
+
+        function getKey(key){
+            return params[key];
+        }
+
+        function printItem(item){
+            var txt = `
+            <div class='item'>
+                <div class='img'>
+                    <img src='img2/${item.src}'>
+                </div>
+                <div class='name'>${item.name}</div>
+                <div class='price'>${item.price}</div>
+            </div>
+            `;
+            container.innerHTML = txt;
+        }
+
+        console.log(params);
+
+    </script>
+</body>
+</html>

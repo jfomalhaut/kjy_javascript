@@ -1,0 +1,76 @@
+<html>
+<head></head>
+<body>
+    <a href='1015_마켓컬리.html'>홈으로</a>
+    <div class='container'></div>
+    <script src='js/items.js'></script>
+    <script>
+        var container = one('.container');
+        var localCart;
+        var cart;
+        var cartList = [];
+        var txt = '', html = '';
+
+
+        makeCart();
+        printCart();
+
+        function one(element){
+            return document.querySelector(element);
+        }
+
+        function makeCart(){
+            cartList = [];
+            localCart = localStorage.getItem('cart');
+            cart = localCart.split(',').map(item => item *1);
+
+            for(var i = 0; i < cart.length; i++){
+                cartList = cartList.concat(pdt.filter(item => item.id === cart[i]));
+            }
+            setLocal();
+        }
+
+        function printCart(){
+            
+            html = '';
+            cartList.forEach((element, idx) => {
+                txt = `
+                <div class='item'>
+                    <div id='img'>
+                        <img src='img2/${element.src}'>
+                    </div>
+                    <div id='info'>
+                        <span id='name'>${element.name}</span>
+                    </div>
+                    <button id='delete' onClick='ondelete(${element.id})'>삭제</button>
+                </div>
+                `;
+                html += txt;
+            })
+
+            container.innerHTML = html;
+
+            
+        }
+
+        function ondelete(id){
+            var index;
+            for(var i = 0; i < cartList.length; i++){
+                if(id === cartList[i].id){
+                    index = i;
+                }
+            }
+            cartList.splice(index, 1);
+            cart.splice(index, 1);
+            printCart();
+            setLocal();
+        }
+
+        function setLocal(){
+            var cartString = cart.join();
+            localStorage.setItem('cart', cartString);
+        }
+
+    </script>
+</body>
+</html>
