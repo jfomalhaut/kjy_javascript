@@ -1,34 +1,119 @@
 <html>
 <head>
+	<link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
 	<style>
 		.container {
-			width: 700px;
-			height: 500px;
-			border: 2px solid;
+			width: 500px;
+			height: 300px;
+			/* border: 2px solid; */
+			box-sizing: border-box;
 			position: relative;
-			margin: 100px auto;
+			margin: 100px auto 30px;
+			overflow: hidden;
 		}
 
 		.box {
+			font-family: 'Krona One', sans-serif;
 			position: absolute;
-			left: 0;
+			left: 100%;
 			top: 0;
-			width: 100%;
-			height: 100%;
+			width: 500px;
+			user-select: none;
+			height: 300px;
+			line-height: 300px;
+			text-align: center;
+			font-size: 150px;
+			color: white;
+		}
+
+		.box:nth-child(1) { background: lightgray; }
+		.box:nth-child(2) { background: darkgray; }
+		.box:nth-child(3) { background: #666; }
+		.box:nth-child(4) { background: #444; }
+		.box:nth-child(5) { background: #000; }
+
+		.box span {
+			background: linear-gradient(to bottom, #a71212, #ffc251);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		.btns {
+			text-align: center;
+		}
+		button {
+			font-size: 30px;
 		}
 
 	</style>
 </head>
 <body>
 	<div class="container">
-		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
+		<div class="box">
+			<span>1</span>
+		</div>
+		<div class="box">
+			<span>2</span>
+		</div>
+		<div class="box">
+			<span>3</span>
+		</div>
+		<div class="box">
+			<span>4</span>
+		</div>
+		<div class="box">
+			<span>5</span>
+		</div>
+	</div>
+	<div class="btns">
+		<button id="prev">이전</button>
+		<button id="next">다음</button>
 	</div>
 	<script>
+		let index = 0;
+		let temp = 0;
+		let animation = false;
+		const boxes = all('.box');
+		const prev = one('#prev');
+		const next = one('#next');
+		const length = boxes.length;
+
+		init();
+
+		function init() {
+			boxes[index].style.left = '0%';
+		}
+
+		function nextSlide() {
+			if (animation) return;
+			animation = true;
+			temp = index;
+			index++;
+			index = index % length;
+			boxes[index].style.cssText = "left: 100%";
+			if (boxes[index].offsetLeft > 0) {
+				boxes[temp].style.cssText = "left: -100%; transition: .5s;";
+				boxes[index].style.cssText = "left: 0%; transition: .5s;";
+				setTimeout(() => {
+					animation = false;
+				}, 500);
+			}
+		}
 		
+		function prevSlide() {
+			
+		}
+
+		function one(element) {
+			return document.querySelector(element);
+		}
+
+		function all(element) {
+			return document.querySelectorAll(element);
+		}
+
+		prev.addEventListener('click', prevSlide);
+		next.addEventListener('click', nextSlide);
 	</script>
 </body>
 </html>

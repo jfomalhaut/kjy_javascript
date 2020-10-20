@@ -7,7 +7,7 @@
 			position: relative;
 			border: 1px solid;
 			margin: 100px auto;
-			/* overflow: hidden; */
+			overflow: hidden;
 		}
 		#wrapper {
 			position: absolute;
@@ -39,9 +39,15 @@
 			<div class="slide">5</div>
 		</div>
 	</div>
-	<button id="next">다음</button>
+	<button id="prev">
+		<h1>이전</h1>
+	</button>
+	<button id="next">
+		<h1>다음</h1>
+	</button>
 	<script>
 		const next = one('#next');
+		const prev = one('#prev');
 		const wrapper = one('#wrapper');
 		const slide = all('.slide');
 		const length = slide.length;
@@ -49,11 +55,23 @@
 		let index = 0;
 
 		function nextSlide() {
+			if (index === length - 1) {
+				return;
+			}
 			index++;
+			wrapper.style.left = `-${index * slideWidth}px`;
+		}
+		
+		function prevSlide() {
+			if (index === 0) {
+				return;
+			}
+			index--;
 			wrapper.style.left = `-${index * slideWidth}px`;
 		}
 
 		next.addEventListener('click', nextSlide);
+		prev.addEventListener('click', prevSlide);
 
 		function one(element) {
 			return document.querySelector(element);
