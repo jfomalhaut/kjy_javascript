@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    background:#333333;
+}
+
+.btns{
+    overflow: hidden;
+    /* height: 40px; */
+    box-sizing: border-box;
+    margin-bottom: 100px;
+}
+
+.logo{
+    height: 200px;
+    box-sizing: border-box;
+}
+
+.search{
+    height: 40px;
+    box-sizing: border-box;
+}
+
+.section{
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+.inner{
+    width: 700px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.section > .inner{
+    padding: 10px;
+    width: 700px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.btn{
+    width: 90px;
+    height: 40px;
+    float: right;
+    background: gray;
+    margin-left: 5px;
+    box-sizing: border-box;
+    font-size: 10px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.logo{
+    font-size: 80px;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 200px;
+    color: white;
+}
+
+#search{
+    height: 40px;
+    line-height: 40px;
+    background: white;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 13px;
+    color: gray;
+    padding-left: 20px;
+}
+
+.box{
+    float: left;
+    height: 150px;
+    background: gray;
+    width: calc((100% - 10px * 4) / 5);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.box:nth-child(5n){
+    margin-right: 0;
+}

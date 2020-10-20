@@ -74,15 +74,15 @@
             index = index % length;
             console.log(index);
             boxes[index].style.cssText = 'left: 100%';
-            setTimeout(() => {
-                if(boxes[index].offsetLeft > 0){
-                    boxes[index].style.cssText = 'left: 0%; transition: .5s;';
-                    setTimeout(() => {
-                        animation = false;
-                    }, 500);
-                }
-            }, 5);
+            if(boxes[index].offsetLeft > 0){
+                boxes[temp].style.cssText = 'left: -100%; transition: .5s;';
+                boxes[index].style.cssText = 'left: 0%; transition: .5s;';
+                setTimeout(() => {
+                    animation = false;
+                }, 500);
+            }
         }
+           
 
         function prevSlide(){
             
