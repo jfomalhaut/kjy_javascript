@@ -1,0 +1,46 @@
+<html>
+<head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        header{
+            background: blue;
+            overflow: hidden;
+        }
+
+        .headerMenu{
+            background: red;
+            height: 150px;
+            width: 500px;
+            margin: 0 auto;
+        }
+        .menu{
+            float: left;
+            width: calc((100% - 10px * 4) / 5);
+            height: 100px;
+            background: green;
+            margin-top: 50px;
+            margin-right: 10px;
+        }
+
+        .menu:nth-child(5){
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class='headerMenu'>
+            <div class='menu'></div>
+            <div class='menu'></div>
+            <div class='menu'></div>
+            <div class='menu'></div>
+            <div class='menu'></div>
+        </div>
+    </header>
+    <script></script>
+</body>
+</html>
