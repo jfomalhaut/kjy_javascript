@@ -1,0 +1,330 @@
+*{margin: 0; padding: 0;}
+
+.headerInner{
+    width: 1110px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+#logo{
+    width: calc(100% / 3);
+    height: 40px;
+    float: right;
+    background-image: url(https://www.subway.co.kr/images/common/logo_w.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#headerIcon{
+    float: right;
+    width: calc(100% / 3);
+}
+#signIn, #signUp{
+    font-size: 13px;
+    float: right;
+    margin-right: 20px;
+    list-style: none;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+#global{
+    list-style: none;
+    width: 30px;
+    height: 30px;
+    margin-right: 0;
+    float: right;
+    background-image: url(https://www.subway.co.kr/images/common/icon_utill_global.png);
+}
+
+.menuSection{
+    width: 1110px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    overflow: hidden; 
+}
+
+#mainMenu > li{
+    width: calc(100% / 6);
+    height: 30px;
+    padding-top: 15px;
+    line-height: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    float: left;
+    list-style: none;
+    text-align: center;
+}
+
+#banner{
+    width: 100%;
+    height: 440px;
+    background-image: url(https://www.subway.co.kr/upload/banner/main_PC_1920x440_20201006110232887.jpg);
+    background-position: center center;
+}
+#bannerInner{
+    width: 1110px;
+    height: 440px;
+    margin: 0 auto;
+    position: relative;
+}
+#bannerBtn{
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+}
+#box1{
+    width:300px;
+    background: #ffce32;
+    float: left;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 30px 0 0 0;
+}
+#boxInner{
+    width: 110px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#findIcon{
+    width: 30px;
+    height: 80px;
+    line-height: 80px;
+    float: left;
+    background-image: url(https://www.subway.co.kr/images/main/icon_map.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 5px;
+}
+#find{
+    height: 80px;
+    line-height: 80px;
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+}
+#box2{
+    width:300px;
+    height: 80px;
+    background: #009223;
+    float: left;
+    box-sizing: border-box;
+    border-radius: 0 0 30px 0;
+}
+#boxInner2{
+    width: 160px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#applyIcon{
+    width: 30px;
+    height: 80px;
+    line-height: 80px;
+    float: left;
+    background-image: url(https://www.subway.co.kr/images/main/icon_franchise.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 5px;
+}
+#apply{
+    height: 80px;
+    line-height: 80px;
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+}
+
+#menu{
+    overflow: hidden;
+    margin-top: 80px;
+}
+
+#menuInner{
+    width: 1110px;
+    margin: 0 auto;
+}
+#title{
+    float: left;
+}
+#titleName{
+    font-size: 40px;
+    font-weight: bold;
+    height: 77px;
+    line-height: 77px;
+    background-image: url(https://www.subway.co.kr/images/main/bul_tit.png);
+    background-repeat: no-repeat;
+    background-position: left;
+}
+#menuList{
+    float: right;
+}
+#menuList > li{
+    font-size: 14px;
+    color: gray;
+    float: left;
+    list-style: none;
+    margin-right: 15px;
+    height: 77px;
+    line-height: 77px;
+}
+#menuContainer{
+    width: 1110px;
+    padding-top: 60px;
+    overflow: hidden;
+    padding: 0 20px;
+}
+#egg{
+    width: calc((100% - 40px)/ 4);
+    overflow: hidden;
+    float: left;
+}
+#egg > #img{
+    width: 100%;
+    height: 182px;
+    margin: 0 auto;
+    text-align: center;
+}
+#egg > #name{
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 20px;
+    height: 20px;
+    width: 100%;
+    text-align: center;
+}
+#egg > #sub{
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: gray;
+}
+#bmt{
+    width: calc((100% - 40px)/ 4);
+    overflow: hidden;
+    float: left;
+}
+#bmt > #img{
+    width: 100%;
+    height: 182px;
+    margin: 0 auto;
+    text-align: center;
+}
+#bmt > #name{
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 20px;
+    height: 20px;
+    width: 100%;
+    text-align: center;
+}
+#bmt > #sub{
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: gray;
+}
+#blt{
+    width: calc((100% - 40px)/ 4);
+    overflow: hidden;
+    float: left;
+}
+#blt > #img{
+    width: 100%;
+    height: 182px;
+    margin: 0 auto;
+    text-align: center;
+}
+#blt > #name{
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 20px;
+    height: 20px;
+    width: 100%;
+    text-align: center;
+}
+#blt > #sub{
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: gray;
+}
+#meat{
+    width: calc((100% - 40px)/ 4);
+    overflow: hidden;
+    float: left;
+}
+#meat > #img{
+    width: 100%;
+    height: 182px;
+    margin: 0 auto;
+    text-align: center;
+}
+#meat > #name{
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 20px;
+    height: 20px;
+    width: 100%;
+    text-align: center;
+}
+#meat > #sub{
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: gray;
+}
+
+#subContainer{
+    margin-top: 30px;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: gray;
+}
+
+#subInner{
+    width: 1280px;
+    padding: 80px 0;
+    margin: 0 auto;
+}
+
+#boxes1{
+    width: 100%;
+    height: 300px;
+}
+
+#boxes1 > #subBox1{
+    float: left;
+    width: 400px;
+    height: 100%;
+    background-image: url(https://www.subway.co.kr/images/main/bg_utilization.png);
+    margin-left: 55px;
+}
+
+#boxes1 > #subBox2{
+    float: left;
+    width: 825px;
+    height: 100%;
+    background-image: url(https://www.subway.co.kr/images/main/img_subway_history.png);
+}
+
+#boxes2{
+    width: 100%;
+    height: 300px;
+}
+#boxes2 > #subBox1{
+    float: left;
+    width: 870px;
+    height: 100%;
+    margin-left: 55px;
+    background: white;
+}
+
+#boxes2 > #subBox2{
+    float: right;
+    width: 270px;
+    height: 100%;
+    margin-right: 55px;
+    background-image: url(https://www.subway.co.kr/upload/banner/img_20200909060458297.jpg);
+}
