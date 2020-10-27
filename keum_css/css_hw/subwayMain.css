@@ -1,7 +1,7 @@
 *{margin: 0; padding: 0;}
 
 .headerInner{
-    width: 1110px;
+    width: 1170px;
     margin: 20px auto;
     box-sizing: border-box;
     overflow: hidden;
@@ -40,7 +40,7 @@
 }
 
 .menuSection{
-    width: 1110px;
+    width: 1170px;
     margin: 20px auto;
     box-sizing: border-box;
     overflow: hidden; 
@@ -63,9 +63,10 @@
     height: 440px;
     background-image: url(https://www.subway.co.kr/upload/banner/main_PC_1920x440_20201006110232887.jpg);
     background-position: center center;
+    background-repeat: no-repeat;
 }
 #bannerInner{
-    width: 1110px;
+    width: 1170px;
     height: 440px;
     margin: 0 auto;
     position: relative;
@@ -134,6 +135,7 @@
     font-size: 18px;
     font-weight: bold;
     float: left;
+    color: white;
 }
 
 #menu{
@@ -142,7 +144,7 @@
 }
 
 #menuInner{
-    width: 1110px;
+    width: 1170px;
     margin: 0 auto;
 }
 #title{
@@ -170,7 +172,7 @@
     line-height: 77px;
 }
 #menuContainer{
-    width: 1110px;
+    width: 1170px;
     padding-top: 60px;
     overflow: hidden;
     padding: 0 20px;
@@ -280,7 +282,7 @@
     margin-top: 30px;
     overflow: hidden;
     box-sizing: border-box;
-    background: gray;
+    background-image: url(https://www.subway.co.kr/images/main/bg_content.gif);
 }
 
 #subInner{
@@ -302,16 +304,58 @@
     margin-left: 55px;
 }
 
+#subBox1 > #contents{
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+#subBox1 > #box1btn{
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    width: 96px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-left: 30px;
+    margin-top: 120px;
+}
+
 #boxes1 > #subBox2{
     float: left;
     width: 825px;
     height: 100%;
     background-image: url(https://www.subway.co.kr/images/main/img_subway_history.png);
 }
+#subBox2 > #contents{
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    margin-top: 30px;
+    margin-left: 400px;
+}
+#subBox2 > #box2btn{
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    width: 132px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-left: 400px;
+    margin-top: 120px;
+}
 
 #boxes2{
     width: 100%;
     height: 300px;
+    margin-top: 30px;
 }
 #boxes2 > #subBox1{
     float: left;
@@ -319,6 +363,57 @@
     height: 100%;
     margin-left: 55px;
     background: white;
+    border-radius: 30px 0 30px 0;
+}
+
+#left{
+    float: left;
+    overflow: hidden;
+    margin-top: 75px;
+    margin-left: 60px;
+}
+
+#left > #title{
+    font-size: 28px;
+    font-weight: bold;
+    background-image: url(https://www.subway.co.kr/images/main/bul_tit.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 77px;
+    width: 100%;
+    line-height: 77px;
+}
+#left > #context{
+    font-size: 14px;
+    font-weight: bold;
+    color: gray;
+    text-align: center;
+    height: 52px;
+    width: 100%;
+    margin-top: 80px;
+    line-height: 26px;
+}
+
+#right{
+    float: left;
+    overflow: hidden;
+
+    margin-top: 75px;
+    margin-left: 60px;
+}
+#rightInfo{
+    list-style: none;
+    font-size: 15px;
+    margin-left: 50px;
+}
+#rightInfo > li{
+    margin-bottom: 20px;
+}
+#more{
+    margin-top: 33px;
+    font-size: 14px;
+    color: gray;
+    margin-left: 50px;
 }
 
 #boxes2 > #subBox2{
@@ -327,4 +422,187 @@
     height: 100%;
     margin-right: 55px;
     background-image: url(https://www.subway.co.kr/upload/banner/img_20200909060458297.jpg);
+    border-radius: 0 30px 0 30px;
+}
+
+#footerSection{
+    width: 100%;
+    overflow: hidden;
+    padding: 40px 0;
+}
+
+#footerInner{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.item{
+    width: calc((100% - 60px) / 4);
+    height: 70px;
+    float: left;
+    margin-left: 20px;
+}
+
+.item:nth-child(1){
+    margin-left: 0;
+}
+.item:nth-child(1) > .image{
+    width: 70px;
+    height: 70px;
+    background-image: url(https://www.subway.co.kr/images/main/icon_quickmenu.png);
+    background-position: 0;
+    float: left;
+}
+.item:nth-child(1) > .content{
+    float: left;
+    height: 70px;
+    margin-left: 10px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+.item:nth-child(1) > .content > .title {
+    font-size: 17px;
+    font-weight: bold;
+}
+.item:nth-child(1) > .content > .contents{
+    font-size: 12px;
+    color: gray;
+}
+
+.item:nth-child(2) > .image{
+    width: 70px;
+    height: 70px;
+    background-image: url(https://www.subway.co.kr/images/main/icon_quickmenu.png);
+    background-position: -70px;
+    float: left;
+}
+.item:nth-child(2) > .content{
+    float: left;
+    height: 70px;
+    margin-left: 10px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+.item:nth-child(2) > .content > .title {
+    font-size: 17px;
+    font-weight: bold;
+}
+.item:nth-child(2) > .content > .contents{
+    font-size: 12px;
+    color: gray;
+}
+
+.item:nth-child(3) > .image{
+    width: 70px;
+    height: 70px;
+    background-image: url(https://www.subway.co.kr/images/main/icon_quickmenu.png);
+    background-position: -140px;
+    float: left;
+}
+.item:nth-child(3) > .content{
+    float: left;
+    height: 70px;
+    margin-left: 10px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+.item:nth-child(3) > .content > .title {
+    font-size: 17px;
+    font-weight: bold;
+}
+.item:nth-child(3) > .content > .contents{
+    font-size: 12px;
+    color: gray;
+}
+
+/* .item:nth-child(4){
+    margin-left: 20px;
+} */
+.item:nth-child(4) > .image{
+    width: 70px;
+    height: 70px;
+    background-image: url(https://www.subway.co.kr/images/main/icon_quickmenu.png);
+    background-position: -210px;
+    float: left;
+}
+.item:nth-child(4) > .content{
+    float: left;
+    height: 70px;
+    margin-left: 10px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+.item:nth-child(4) > .content > .title {
+    font-size: 17px;
+    font-weight: bold;
+}
+.item:nth-child(4) > .content > .contents{
+    font-size: 12px;
+    color: gray;
+}
+
+#footer{
+    width: 100%;
+    overflow: hidden;
+    background: #292929;
+}
+
+#footerIn{
+    width: 1170px;
+    margin: 22 auto;
+    overflow: hidden;
+}
+
+#section1{
+    width: 100%;
+    height: 35px;
+    margin-bottom: 20px;
+}
+#footerMenu{
+    margin: 20px 0;
+}
+#footerMenu > li{
+    float: left;
+    list-style: none;
+    font-size: 14px;
+    color: lightgray;
+    margin-right: 15px;
+    line-height: 35px;
+}
+
+
+#section2{
+    float: left;
+    margin-top: 10px;
+}
+#subwayInfo > li{
+    float: left;
+    list-style: none;
+    font-size: 13px;
+    color: lightgray;
+    margin-right: 15px;
+}
+#subway{
+    font-size: 13px;
+    color: lightgray;
+}
+
+#section3{
+    float: right;
+}
+
+#instagram{
+    width: 50px;
+    height: 50px;
+    background-image: url(https://www.subway.co.kr/images/common/icon_sns_instar.png);
+    list-style: none;
+    float: left;
+}
+#facebook{
+    width: 50px;
+    height: 50px;
+    background-image: url(https://www.subway.co.kr/images/common/icon_sns_facebook.png);
+    list-style: none;
+    float: left;
+    margin-left: 20px;
 }
