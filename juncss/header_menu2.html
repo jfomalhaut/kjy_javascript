@@ -1,0 +1,41 @@
+<html>
+<head>
+	<style>
+		* { margin: 0; padding: 0;}
+		li {
+			list-style: none;
+		}
+		header {
+			height: 150px;
+			background: blue;
+			position: relative;
+		}
+		ul {
+			position: absolute;
+			bottom: 0;
+			width: 900px;
+			left: 50%;
+			transform: translateX(-50%);
+			background: yellow
+		}
+		li {
+			float: left;
+			text-align: center;
+			list-style: none;
+			width: calc(100% / 5);
+			line-height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<ul>
+			<li>item1</li>
+			<li>item2</li>
+			<li>item3</li>
+			<li>item4</li>
+			<li>item5</li>
+		</ul>
+	</header>
+</body>
+</html>
