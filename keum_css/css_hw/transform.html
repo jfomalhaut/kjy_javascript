@@ -1,0 +1,51 @@
+<html>
+<head>
+	<style>
+		.container {
+			width: 700px;
+			height: 700px;
+			border: 5px solid;
+			margin: 100px auto;
+			position: relative;
+		}
+
+		.container:after {
+			content: "";
+			position: absolute;
+			left: 0; top:50%;
+			height: 1px;
+			width: 100%;
+			background: gray;
+			transform: translateY(-50%);
+		}
+
+		.container:before {
+			content: "";
+			position: absolute;
+			left: 50%; top:0;
+			width: 1px;
+			height: 100%;
+			background: gray;
+			transform: translateX(-50%);
+		}
+		
+		.box {
+			width: 200px;
+			height: 200px;
+			background: darkolivegreen;
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: -1;
+			top: 50%;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box"></div>
+	</div>
+</body>
+</html>

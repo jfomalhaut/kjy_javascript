@@ -1,0 +1,49 @@
+<html>
+<head>
+	<style>
+		div {
+			width: 300px;
+			height: 80px;
+			line-height: 80px;
+			text-align: center;
+			background: #ffce32;
+		}
+		span {
+			font-size: 20px;
+			box-sizing: border-box;
+			padding-left: 50px;
+			position: relative;
+		}
+		span:before {
+			content:'';
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			left: 0; top: 50%;
+			transform: translateY(-50%);
+			background-image: url('https://www.subway.co.kr/images/main/icon_map.png');
+			background-size: 20px auto;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+		footer {
+			background: #444;
+			height: 200px;
+			position: absolute;
+			bottom:0; left:0;
+			width: 100%;
+		}
+		footer:before {
+			content: "";
+			height: 1px;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<span>매장찾기</span>
+	</div>
+	<footer></footer>
+</body>
+</html>
