@@ -1,0 +1,120 @@
+<html>
+<head>
+    <style>
+        *{margin: 0; padding:0; box-sizing: border-box; list-style: none;}
+        header{
+            height: 150px;
+            background: #eaeaea;
+            padding-top: 100px;
+        }
+        ul.outUl{
+            width: 900;
+            margin: 0 auto 0;
+            height: 50px;
+            transition: .3s;
+        }
+        img{
+            width: 100%;
+            /* position: absolute; */
+        }
+        li.outLi{
+            position: relative;
+            float: left;
+            width: calc(100% / 5);
+            text-align: center;
+            line-height: 50px;
+            transition: .3s;
+            /* background: darkolivegreen; */
+            /* color: white; */
+        }
+        /* li.outLi:hover{
+            color: green;
+        } */
+        ul.outUl:hover  ul{
+            display: block;
+        }
+        li.outLi ul{
+            width: 100%;
+            /* display: none; */
+            position: absolute;
+            z-index: 100;
+            /* border: 1px solid white; */
+            transition: .3s;
+            /* text-align: center; */
+        }
+        ul.outUl:hover + .bg{
+            /* display: block; */
+            height: 250px;
+        }
+        .bg{
+            position: absolute;
+            height: 0;
+            background: red;
+            width: 100%;
+            left: 0;
+            top: 150px;
+            /* display: none; */
+            transition: .3s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul class='outUl'>
+            <li class='outLi'>
+                <label>메뉴1</label>
+                <ul>
+                    <li>submenu1</li>
+                    <li>submenu2</li>
+                    <li>submenu3</li>
+                    <li>submenu4</li>
+                    <li>submenu5</li>
+                </ul>
+            </li>
+            <li class='outLi'>
+                <label>메뉴1</label>
+                <ul>
+                    <li>submenu1</li>
+                    <li>submenu2</li>
+                    <li>submenu3</li>
+                    <li>submenu4</li>
+                    <li>submenu5</li>
+                </ul>
+            </li>
+            <li class='outLi'>
+                <label>메뉴1</label>
+                <ul>
+                    <li>submenu1</li>
+                    <li>submenu2</li>
+                    <li>submenu3</li>
+                    <li>submenu4</li>
+                    <li>submenu5</li>
+                </ul>
+            </li>
+            <li class='outLi'>
+                <label>메뉴1</label>
+                <ul>
+                    <li>submenu1</li>
+                    <li>submenu2</li>
+                    <li>submenu3</li>
+                    <li>submenu4</li>
+                    <li>submenu5</li>
+                </ul>
+            </li>
+            <li class='outLi'>
+                <label>메뉴1</label>
+                <ul>
+                    <li>submenu1</li>
+                    <li>submenu2</li>
+                    <li>submenu3</li>
+                    <li>submenu4</li>
+                    <li>submenu5</li>
+                </ul>
+            </li>
+        </ul>
+        <div class='bg'></div>
+        <img src='https://www.subway.co.kr/upload/banner/main_PC_1920x440_20201007112359990.jpg'>
+    </header>
+    <script></script>
+</body>
+</html>

@@ -68,7 +68,7 @@
     width: 100%;
     overflow: hidden;
     border-top: 1px solid gray;
-    position: relative;
+    position: absolute;
     z-index: 1;
     display: none;
 }
