@@ -1,0 +1,118 @@
+<html>
+<head>
+	<style>
+		* { 
+			box-sizing: border-box;
+		}
+		.table {
+			max-width: 1000px;
+			margin: 50px auto;
+			border: 1px solid #ddd;
+		}
+
+		.row {
+			display: flex;
+			align-items: center;
+			padding: 10px 0;
+			border-bottom: 1px solid #ddd;
+		}
+
+		.row span:nth-child(1) {
+			width: 50px;
+			flex-shrink: 0;
+			text-align: center;
+		}
+		.row span:nth-child(2) {
+			flex-grow: 1;
+			/* width: calc(100% - 50px - 150px - 150px); */
+			padding: 0 10px;
+		}
+		.row span:nth-child(3) {
+			width: 150px;
+			flex-shrink: 0;
+			text-align: center;
+		}
+		.row span:nth-child(4) {
+			width: 150px;
+			flex-shrink: 0;
+			text-align: center;
+		}
+
+
+		.thead {
+			text-align: center;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.tbody .row:last-child {
+			border-bottom: none !important;
+		}
+		.tbody .row:nth-child(2n) {
+			background: #f9f9f9;
+		}
+
+		.tbody .row span:nth-child(2):hover {
+			text-decoration: underline;
+			font-weight: bold;;
+			cursor: pointer;
+		}
+
+		@media screen and (max-width: 790px) {
+			.thead {
+				color: red !important;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="table">
+		<div class="thead">
+			<div class="row">
+				<span>번호</span>
+				<span>내용</span>
+				<span>작성자</span>
+				<span>날짜</span>
+			</div>
+		</div>
+		<div class="tbody">
+			<div class="row">
+				<span>1</span>
+				<span>안녕하세요 좋은아침입니다.</span>
+				<span>관리자</span>
+				<span>2020-11-04</span>
+			</div>
+			<div class="row">
+				<span>1</span>
+				<span>안녕하세요 좋은아침입니다.</span>
+				<span>관리자</span>
+				<span>2020-11-04</span>
+			</div>
+			<div class="row">
+				<span>1</span>
+				<span>안녕하세요 좋은아침입니다.</span>
+				<span>관리자</span>
+				<span>2020-11-04</span>
+			</div>
+			<div class="row">
+				<span>1</span>
+				<span>안녕하세요 좋은아침입니다.</span>
+				<span>관리자</span>
+				<span>2020-11-04</span>
+			</div>
+			<div class="row">
+				<span>1</span>
+				<span>안녕하세요 좋은아침입니다.</span>
+				<span>관리자</span>
+				<span>2020-11-04</span>
+			</div>
+			<div class="row">
+				<span>1</span>
+				<span>안녕하세요 좋은아침입니다.</span>
+				<span>관리자</span>
+				<span>2020-11-04</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

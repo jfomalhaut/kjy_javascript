@@ -1,0 +1,40 @@
+<html>
+<head>
+	<style>
+		.container {
+			width: 1000px;
+			height: 800px;
+			margin: 100px auto;
+			border: 2px solid;
+		}
+		.container:hover .square {
+			transform: translateX(100px);
+			transform: scale(1.5);
+			transform: rotate(-90deg);
+		}
+		.container:hover h1 {
+			display: none;
+		}
+
+		.square {
+			transition: .2s;
+			background-color: red;
+			width: 500px;
+			height: 500px;
+			display: inline-block;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="square"></div>
+		<h1>샌드위치</h1>
+		<h1>샌드위치</h1>
+		<h1>샌드위치</h1>
+		<h1>샌드위치</h1>
+		<h1>샌드위치</h1>
+		<h1>샌드위치</h1>
+	</div>
+</body>
+</html>
