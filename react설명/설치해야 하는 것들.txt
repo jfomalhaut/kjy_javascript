@@ -1,0 +1,11 @@
+
+
+
+[webpack 관련 설치]
+npm i -D webpack webpack-cli webpack-dev-server
+
+[babel 관련]
+npm i -D babel-loader @babel/core @babel/preset-env @babel/preset-react
+
+[react 관련]
+npm i -s react react-dom react-router-dom
