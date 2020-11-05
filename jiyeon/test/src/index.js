@@ -1,4 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import SignUp from './SignUp';
+// import App from './App';
 
-ReactDOM.render(<h1>hello, react!</h1>, document.getElementById("root"));
+handleCreate = (data) => {
+    console.log(data);
+}
+ReactDOM.render(
+    <div>
+        {/* <SignUp
+            onCreate={this.handleCreate}
+        /> */}
+        <SignUp />
+        <div>hello</div>
+    </div>
+    , document.getElementById("root"));
