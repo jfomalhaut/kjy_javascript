@@ -2,7 +2,7 @@
 
 
 [webpack 관련 설치]
-npm i -D webpack webpack-cli webpack-dev-server
+npm i -D webpack webpack-cli@3.3.12 webpack-dev-server
 
 [babel 관련]
 npm i -D babel-loader @babel/core @babel/preset-env @babel/preset-react
