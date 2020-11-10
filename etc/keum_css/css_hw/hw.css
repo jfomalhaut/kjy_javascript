@@ -250,17 +250,84 @@
     width: 540px;
     height: 260px;
     margin-right: 20px;
+    padding: 30px;
 }
 .boxes2 > .box:nth-child(1){
     background-image: url(https://www.snuh.org/asset/img/main/bg_search2020_03.jpg);
     background-position: center;
     background-repeat: no-repeat;
 }
+.boxes2 > .box:nth-child(1) > .text1{
+    font-size: 30px;
+    font-weight: bold;
+}
+.boxes2 > .box:nth-child(1) > .text2{
+    font-size: 15px;
+    margin-top: 25px;
+}
+.boxes2 > .box:nth-child(1) > .searchBox {
+    display: flex;
+    margin-top: 55px;
+}
+.boxes2 > .box:nth-child(1) > .searchBox > li:nth-child(1){
+    width: 220px;
+    height: 40px;
+    font-size: 15px;
+    color: #999999;
+    line-height: 40px;
+    background: white;
+    padding-left: 10px;
+}
+.boxes2 > .box:nth-child(1) > .searchBox > li:nth-child(2){
+    width: 79.45px;
+    height: 40px;
+    background: #2263bb;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+}
 .boxes2 > .box:nth-child(2){
     margin-right: 0;
     background: white;
+    padding: 30px;
 }
-
+.boxes2 > .box:nth-child(2) > .section1{
+    height: 40px;
+}
+.boxes2 > .box:nth-child(2) > .section1 > .menuList{
+    background: white;
+    display: flex;
+    justify-content: space-between;
+}
+.boxes2 > .box:nth-child(2) > .section1 > .menuList > li{
+    font-size: 20px;
+    font-weight: bold;
+    flex-grow: 1;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.boxes2 > .box:nth-child(2) > .section2{
+    margin-top: 20px;
+}   
+.boxes2 > .box:nth-child(2) > .section2 > li{
+    display: flex;
+    height: 35px;
+    line-height: 35px;
+    font-size: 15px;
+    list-style: circle;
+}
+.boxes2 > .box:nth-child(2) > .section2 > li > .contents{
+    font-size: 15px;
+    margin-top: 0;
+    width: calc(100% - 80px);
+    text-align: left;
+} 
+.boxes2 > .box:nth-child(2) > .section2 > li > .date{
+    font-size: 15px;
+    width: 80px;
+}
 .boxes3{
     display: flex;
     margin-top: 20px;
@@ -269,10 +336,49 @@
     width: 260px;
     height: 260px;
     margin-right: 20px;
+    padding: 30px;
 }
 .boxes3 > .box:nth-child(1){
     width: 540px;
     background: white;
+    padding: 30px;
+    color: black;
+}
+.boxes3 > .box:nth-child(1) > .list1{
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    line-height: 30px;
+    background: pink;
+    color: black;
+}
+.boxes3 > .box:nth-child(1) > .list1 > .div1{
+    font-size: 20px;
+    font-weight: bold;
+}
+.boxes3 > .box:nth-child(1) > .list1 > .divContainer{
+    display: flex;
+}
+.boxes3 > .box:nth-child(1) > .list1 > .divContainer > .div2{
+    color: #999999;
+    background: white;
+}
+.boxes3 > .box:nth-child(1) > .list1 > .divContainer > .div3{
+    display: flex;
+}
+.boxes3 > .box:nth-child(1) > .list1 > .divContainer > .div3 > li{
+    width: 30px;
+    height: 30px;
+    color: black;
+    background: yellow;
+    text-align: center;
+}
+
+.boxes3 > .box:nth-child(1) > .list2{
+    margin-top: 35px;
+    background: blue;
+    width: 480px;
+    height: 140px;
 }
 .boxes3 > .box:nth-child(2){
     background: #3298b7;
