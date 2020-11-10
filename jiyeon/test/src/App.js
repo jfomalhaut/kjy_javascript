@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
+import SignUp from './SignUp';
 
 
-function App(){
-    return(
-        <h1>App Component</h1>
-    );
+class App extends Component {
+    
+    handleCreate = (data) => {
+        console.log(data);
+    }
+
+    render(){
+        return(
+            <div>
+                <SignUp onCreate={this.handleCreate} />
+            </div>
+        );
+    }
 }
+
 
 export default App;

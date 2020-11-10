@@ -11,10 +11,28 @@ module.exports = {
                 use: {
                     loader: "babel-loader",
                     options: {
-                        presets: ["@babel/preset-env"]
+                        presets: ["@babel/preset-env"],
+                        plugins: ["@babel/plugin-proposal-class-properties"]
                     }
                 }
-            }
+            },
+            {
+                test: /\.html$/,
+                use: [
+                    {
+                        loader: "html-loader",
+                        options: {minimize: true}
+                    }
+                ]
+            },
+            {
+                test: /\.css$/,
+                use: ["style-loader"]
+            },
+            {
+                test: /\.css$/,
+                use: ["css-loader"]
+            } 
         ]
     },
 
