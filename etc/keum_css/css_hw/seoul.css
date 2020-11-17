@@ -1,0 +1,936 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+#header1{
+    /* height: 60px; */
+}
+#header1Inner{
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+}
+.header1Box{
+    width: calc(100% / 3);
+    height: 60px;
+}
+.header1Box:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#SNUHLogo{
+    width: 239px;
+    height: 25px;
+    background-image: url(https://www.snuh.org/asset/img/common/spr_common.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.header1Box:nth-child(3){
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.header1Box:nth-child(3) > li{
+    width: fit-content;
+    margin-right: 10px;
+}
+.header1Box:nth-child(3) > li:nth-child(1){
+    font-size: 13px;
+}
+#header1BoxIcon{
+    width: 15px;
+    height: 15px;
+    background-image: url(https://www.snuh.org/asset/img/common/spr_common.png);
+    background-position: -321px 0;
+    /* font-size: 11px; */
+}
+
+#header2::before{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #ebebeb;
+}
+#header2{
+    position: sticky;
+    top: 0;
+    background: white;
+}
+#header2Inner{
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+#header2MenuIcon{
+    width: 30px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+#header2MenuIcon1{
+    background-image: url(https://www.snuh.org/asset/img/common/spr_common.png);
+    background-position: 0 -27px;
+    width: 30px;
+    height: 22px;
+}
+#header2MenuList{
+    display: flex;
+    height: 80px;
+    flex-grow: 1;
+}
+#header2MenuList > li{
+    margin: 0 auto;
+    width: fit-content;
+    height: 100%;
+    padding: 10px;
+    font-weight: bold;
+    line-height: 60px;
+    text-align: center;
+}
+#header2SearchIcon{
+    width: 31px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+#header2SearchIcon2{
+    width: 31px;
+    height: 31px;
+    background-image: url(https://www.snuh.org/asset/img/common/spr_common.png);
+    background-position: -32px -27px;
+}
+
+#mainBanner{
+    height: 460px;
+    background-image: url(https://www.snuh.org/asset/img/main/bg_mainVisuall_20200212.jpg);
+}
+
+#section1{
+    height: 920px;
+    background: #ddd;
+}
+#section1Inner{
+    padding: 50px 0;
+    width: 1100px;
+    margin: 0 auto;
+}
+.section1Box:nth-child(1){
+    display: flex;
+    margin-bottom: 20px;
+}
+.section1Box:nth-child(1) > .box{
+    width: 260px;
+    height: 260px;
+    background: lightseagreen;
+    margin-right: 20px;
+    padding: 25px 30px;
+    color: white;
+}
+.section1Box:nth-child(1) > .box:nth-child(1){
+    background: #008ace;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.section1Box:nth-child(1) > .box:nth-child(1) > #box1Title{
+    font-size: 20px;
+    font-weight: bold;
+    width: fit-content;
+    height: fit-content;
+}
+.section1Box:nth-child(1) > .box:nth-child(1) > #box1Btn{
+    display: flex;
+}
+.section1Box:nth-child(1) > .box:nth-child(1) > #box1Btn > .box{
+    width: 100px;
+    height: 40px;
+    border: 1px solid white;
+    line-height: 40px;
+    text-align: center;
+    font-size: 13px;
+}
+.section1Box:nth-child(1) > .box:nth-child(1) > #box1Btn > .box:nth-child(1){
+    border-right: none;
+}
+
+.section1Box:nth-child(1) > .box:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #2763ba;
+}
+.section1Box:nth-child(1) > .box:nth-child(2) > #box2Title{
+    font-size: 20px;
+    font-weight: bold;
+    width: fit-content;
+    height: fit-content;
+}
+.section1Box:nth-child(1) > .box:nth-child(2) > #box2Btn{
+    display: flex;
+    width: 200px;
+}
+.section1Box:nth-child(1) > .box:nth-child(2) > #box2Btn > .box{
+    padding: 0 10px;
+    height: 40px;
+    border: 1px solid white;
+    line-height: 40px;
+    text-align: center;
+    font-size: 13px;
+}
+.section1Box:nth-child(1) > .box:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #2ca48f;
+}
+.section1Box:nth-child(1) > .box:nth-child(3) > #box3Title{
+    font-size: 20px;
+    font-weight: bold;
+    width: fit-content;
+    height: fit-content;
+}
+.section1Box:nth-child(1) > .box:nth-child(3) > #box3Btn{
+    display: flex;
+    width: 200px;
+}
+.section1Box:nth-child(1) > .box:nth-child(3) > #box3Btn > .box{
+    width: 100px;
+    height: 40px;
+    border: 1px solid white;
+    line-height: 40px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.section1Box:nth-child(1) > .box:nth-child(4){
+    margin-right: 0;
+    background: white;
+}
+.section1Box:nth-child(1) > .box:nth-child(4) > #box4Content1{
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 16px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+}
+.section1Box:nth-child(1) > .box:nth-child(4) > #box4Content1 > li{
+    width: fit-content;
+}
+.section1Box:nth-child(1) > .box:nth-child(4) > #box4Content2{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.section1Box:nth-child(1) > .box:nth-child(4) > #box4Content2 > li{
+    padding: 0 10px;
+    border: 1px solid #999999;
+    color: #999999;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+}
+.section1Box:nth-child(1) > .box:nth-child(4) > #box4Content2 > li:nth-child(2){
+    border-top: none;
+}
+.section1Box:nth-child(1) > .box:nth-child(4) > #box4Content3{
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: black;
+    margin-bottom: 20px;
+}
+.section1Box:nth-child(1) > .box:nth-child(4) > #box4Content3 > li{
+    width: fit-content;
+    height: fit-content;
+}
+
+.section1Box:nth-child(1) > .box:nth-child(4) > #box4Content4{
+    width: 100%;
+    height: 38px;
+    background: #2263bb;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 38px;
+    text-align: center;
+}
+
+.section1Box:nth-child(2){
+    display: flex;
+    margin-bottom: 20px;
+}
+.section1Box:nth-child(2) > .box{
+    width: 540px;
+    height: 260px;
+    margin-right: 20px;
+    background: lightblue;
+    padding: 25px 30px;
+}
+.section1Box:nth-child(2) > .box:nth-child(1){
+    background-image: url(https://www.snuh.org/asset/img/main/bg_search2020_04.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.section1Box:nth-child(2) > .box:nth-child(1) > #box1Content1{
+    font-size: 30px;
+    font-weight: bold;
+    width: fit-content;
+}
+.section1Box:nth-child(2) > .box:nth-child(1) > #box1Content2{
+    /* font-size: 20px;
+    font-weight: bold;
+    width: fit-content; */
+}
+.section1Box:nth-child(2) > .box:nth-child(1) > #box1Content3{
+    display: flex;
+}
+.section1Box:nth-child(2) > .box:nth-child(1) > #box1Content3 > li:nth-child(1){
+    color: #999999;
+    border: 1px solid #2263bb;
+    width: 220px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    background: white;
+}
+.section1Box:nth-child(2) > .box:nth-child(1) > #box1Content3 > li:nth-child(2){
+    color: white;
+    font-weight: bold;
+    width: 79.45px;
+    height: 40px;
+    line-height: 40px;
+    background: #2263bb;
+    text-align: center;
+}
+.section1Box:nth-child(2) > .box:nth-child(2){
+    margin-right: 0;
+    background: white;
+}
+.section1Box:nth-child(2) > .box:nth-child(2) > #menuList{
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+.section1Box:nth-child(2) > .box:nth-child(2) > #menuList > li{
+    width: fit-content;
+}
+.section1Box:nth-child(2) > .box:nth-child(2) > #menuList > li:nth-child(7){
+    width: 20px;
+    height: 20px;
+    border: 1px solid lightgray;
+    line-height: 20px;
+    text-align: center;
+    color: #2263bb;
+    font-weight: bold;
+}
+.section1Box:nth-child(2) > .box:nth-child(2) > #newsList > li{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    list-style: circle;
+}
+.section1Box:nth-child(2) > .box:nth-child(2) > #newsList > li > #newsContent{
+    width: fit-content;
+}
+.section1Box:nth-child(2) > .box:nth-child(2) > #newsList > li > #newsDate{
+    width: fit-content;
+    color: #666666;
+}
+.section1Box:nth-child(3) {
+    display: flex;
+}
+.section1Box:nth-child(3) > .box{
+    width: 260px;
+    height: 260px;
+    background: lightseagreen;
+    margin-right: 20px;
+    padding: 25px 30px;
+}
+.section1Box:nth-child(3) > .box:nth-child(1){
+    width: 540px;
+    height: 260px;
+    background: white;
+    padding: 25px 30px;
+}
+.section1Box:nth-child(3) > .box:nth-child(1) > #box1Content1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.section1Box:nth-child(3) > .box:nth-child(1) > #box1Content1 > #box1Content1Title{
+    font-weight: bold;
+    width: fit-content;
+    font-size: 20px;
+}
+.section1Box:nth-child(3) > .box:nth-child(1) > #box1Content1 > #nowPage{
+    display: flex;
+}
+.section1Box:nth-child(3) > .box:nth-child(1) > #box1Content1 > #nowPage > li{
+    font-size: 13px;
+}
+.section1Box:nth-child(3) > .box:nth-child(1) > #box1Content1 > #nowPage > li:nth-child(2){
+    display: flex;
+    margin-left: 20px;
+}
+.section1Box:nth-child(3) > .box:nth-child(1) > #box1Content1 > #nowPage > li:nth-child(2) > .box{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid;
+    border-right: none;
+}
+.section1Box:nth-child(3) > .box:nth-child(1) > #box1Content1 > #nowPage > li:nth-child(2) > .box:nth-child(3){
+    border-right: 1px solid;
+}
+.section1Box:nth-child(3) > .box:nth-child(1) > #box1Content2{
+    width: 100%;
+    height: 140px;
+    display: flex;
+}
+.section1Box:nth-child(3) > .box:nth-child(1) > #box1Content2 > #box1Content2Img{
+    width: 140px;
+    height: 140px;
+    background-position: center;
+    background-image: url(https://www.snuh.org/upload/conts/ezone/6dc9cee523bb4ef8b14e0a11edee7190.jpg);
+    margin-right: 30px;
+}
+.section1Box:nth-child(3) > .box:nth-child(1) > #box1Content2 > #box1Content2Messeage{
+    width: calc(100% - 170px);
+    height: 140px;
+}
+.section1Box:nth-child(3) > .box:nth-child(1) > #box1Content2 > #box1Content2Messeage > .box:nth-child(1){
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.section1Box:nth-child(3) > .box:nth-child(2){
+    margin-right: 20px;
+    background: #3298b7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 30px;
+    color: white;
+}
+.section1Box:nth-child(3) > .box:nth-child(2) > #box2Content1{
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.section1Box:nth-child(3) > .box:nth-child(2) > #box2Content3{
+    width: 200px;
+    height: 40px;
+    display: flex;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+}
+.section1Box:nth-child(3) > .box:nth-child(2) > #box2Content3 > #box1{
+    width: 100px;
+    border: 1px solid white;
+    border-right: none;
+}
+.section1Box:nth-child(3) > .box:nth-child(2) > #box2Content3 > #box2{
+    width: 100px;
+    border: 1px solid white;
+}
+
+.section1Box:nth-child(3) > .box:nth-child(3){
+    background: #627ad0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 30px;
+    color: white;
+    margin-right: 0;
+}
+.section1Box:nth-child(3) > .box:nth-child(3) > #box3Content1{
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.section1Box:nth-child(3) > .box:nth-child(3) > #box3Content3{
+    width: 200px;
+    height: 40px;
+    display: flex;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+}
+.section1Box:nth-child(3) > .box:nth-child(3) > #box3Content3 > #box1{
+    width: 100px;
+    border: 1px solid white;
+    border-right: none;
+}
+.section1Box:nth-child(3) > .box:nth-child(3) > #box3Content3 > #box2{
+    width: 100px;
+    border: 1px solid white;
+}
+
+#section2{
+    height: 576.6px;
+}
+#section2Inner{
+    padding: 50px 0;
+    width: 1100px;
+    margin: 0 auto;
+}
+#section2Container1{
+    width: 100%;
+    height: fit-content;
+    line-height: fit-content;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 18px;
+}
+#section2Container2{
+    font-size: 18px;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    margin-bottom: 45px;
+}
+#section2Container3{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+#section2Container3 > li:nth-child(1){
+    padding: 25px 30px;
+    width: 260px;
+    height: 350px;
+    background-image: url(https://www.snuh.org/asset/img/main/bg_mainHealth01.jpg);
+    margin-right: 20px;
+}
+#section2Container3 > li:nth-child(1) > #li1Title{
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    margin: 18px 0 32px 0;
+}
+#section2Container3 > li:nth-child(1) > #li1Content{
+    font-size: 16px;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+}
+#section2Container3 > li:nth-child(2){
+    padding: 25px 30px;
+    width: 260px;
+    height: 350px;
+    background-image: url(https://www.snuh.org/asset/img/main/bg_mainHealth02.jpg);
+    margin-right: 20px;
+}
+#section2Container3 > li:nth-child(2) > #li2Title{
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    margin: 18px 0 32px 0;
+}
+#section2Container3 > li:nth-child(2) > #li2Content{
+    font-size: 16px;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+}
+#section2Container3 > li:nth-child(3){
+    padding: 25px 30px;
+    width: 260px;
+    height: 350px;
+    background-image: url(https://www.snuh.org/asset/img/main/bg_mainHealth03.jpg);
+    margin-right: 20px;
+}
+#section2Container3 > li:nth-child(3) > #li3Title{
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    margin: 18px 0 32px 0;
+}
+#section2Container3 > li:nth-child(3) > #li3Content{
+    font-size: 16px;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+}
+#section2Container3 > li:nth-child(4){
+    padding: 25px 30px;
+    width: 260px;
+    height: 350px;
+    background-image: url(https://www.snuh.org/asset/img/main/bg_mainHealth04.jpg);
+}
+#section2Container3 > li:nth-child(4) > #li4Title{
+    margin: 18px 0 32px 0;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+}
+#section2Container3 > li:nth-child(4) > #li4Content{
+    font-size: 16px;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    margin-bottom: 30px;
+}
+#section2Container3 > li:nth-child(4) > #li4List{
+    
+}
+#section2Container3 > li:nth-child(4) > #li4List > div{
+    width: 100%;
+    height: 40px;
+    border: 1px solid white;
+    border-bottom: none;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+}
+#section2Container3 > li:nth-child(4) > #li4List > #li4List4{
+    width: 100%;
+    height: 40px;
+    border: 1px solid white;
+}
+#section3{
+    height: 360px;
+    background: #ddd;
+}
+#section3Inner{
+    width: 1100px;
+    margin: 0 auto;
+    padding: 50px 0;
+    display: flex;
+}
+#section3Inner > li{
+    width: 260px;
+    height: 260px;
+    margin-right: 20px;
+    padding: 25px 30px;
+    color: white;
+}
+#section3Inner > li:nth-child(1){
+    background: #627ad0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#section3Inner > li:nth-child(1) > #li1Title{
+    font-size: 20px;
+    font-weight: bold;
+}
+#section3Inner > li:nth-child(1) > #li1Content{
+    background: #627ad0;
+}
+#section3Inner > li:nth-child(1) > #li1Box{
+    width: 100%;
+    height: 40px;
+    display: flex;
+}
+#section3Inner > li:nth-child(1) > #li1Box > div{
+    width: 100px;
+    border: 1px solid white;
+    border-right: none;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+}
+#section3Inner > li:nth-child(1) > #li1Box > div:nth-child(2){
+    width: 100px;
+    border: 1px solid white;
+    /* border-right: none; */
+}
+#section3Inner > li:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #2763ba;
+}
+#section3Inner > li:nth-child(2) > #li2Title{
+    font-size: 20px;
+    font-weight: bold;
+}
+#section3Inner > li:nth-child(2) > #li2Content{
+    /* background: #627ad0; */
+}
+#section3Inner > li:nth-child(2) > #li2Box{
+    width: 100%;
+    height: 40px;
+    display: flex;
+}
+#section3Inner > li:nth-child(2) > #li2Box > div{
+    width: 100px;
+    border: 1px solid white;
+    border-right: none;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+}
+#section3Inner > li:nth-child(2) > #li2Box > div:nth-child(2){
+    width: 100px;
+    border: 1px solid white;
+    /* border-right: none; */
+}
+#section3Inner > li:nth-child(3){
+    background: #2ca48f;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#section3Inner > li:nth-child(3) > #li3Title{
+    font-size: 20px;
+    font-weight: bold;
+}
+#section3Inner > li:nth-child(3) > #li3Content{
+    /* background: #627ad0; */
+}
+#section3Inner > li:nth-child(3) > #li3Box{
+    width: 100%;
+    height: 40px;
+    display: flex;
+}
+#section3Inner > li:nth-child(3) > #li3Box > div{
+    width: 100px;
+    border: 1px solid white;
+    border-right: none;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+}
+#section3Inner > li:nth-child(3) > #li3Box > div:nth-child(2){
+    width: 100px;
+    border: 1px solid white;
+    /* border-right: none; */
+}
+#section3Inner > li:nth-child(4){
+    background: #3298b7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 0;
+}
+#section3Inner > li:nth-child(4) > #li4Title{
+    font-size: 20px;
+    font-weight: bold;
+}
+#section3Inner > li:nth-child(4) > #li4Content{
+    /* background: #627ad0; */
+}
+#section3Inner > li:nth-child(4) > #li4Box{
+    width: 100%;
+    height: 40px;
+    display: flex;
+}
+#section3Inner > li:nth-child(4) > #li4Box > div{
+    width: 100px;
+    border: 1px solid white;
+    border-right: none;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+}
+#section3Inner > li:nth-child(4) > #li4Box > div:nth-child(2){
+    width: 100px;
+    border: 1px solid white;
+    /* border-right: none; */
+}
+
+
+#section4{
+    height: 743.6px;
+}
+#section4Inner{
+    padding: 50px 0;
+    width: 1100px;
+    margin: 0 auto;
+}
+#section4Box1{
+    width: 100%;
+    height: fit-content;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 18px;
+}
+#section4Box2{
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    margin-bottom: 32px;
+}
+#section4Box3{
+    margin: 0 auto;
+    display: flex;
+    width: 545px;
+    height: 140px;
+    margin-bottom: 35px;
+}
+#section4Box3 > li{
+    width: 115px;
+    height: 140px;
+    margin-right: 100px;
+}
+#section4Box3 > li:nth-child(1) > div:nth-child(1){
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    background-image: url(https://www.snuh.org/asset/img/main/spr_mainWay.png);
+    background-position: 0 0;
+    margin-bottom: 10px;
+}
+#section4Box3 > li:nth-child(1) > div:nth-child(2){
+    text-align: center;
+    font-size: 18px;
+}
+#section4Box3 > li:nth-child(2) > div:nth-child(1){
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    background-image: url(https://www.snuh.org/asset/img/main/spr_mainWay.png);
+    background-position: 0 0;
+    margin-bottom: 10px;
+}
+#section4Box3 > li:nth-child(2) > div:nth-child(2){
+    text-align: center;
+    font-size: 18px;
+}
+#section4Box3 > li:nth-child(3) > div:nth-child(1){
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    background-image: url(https://www.snuh.org/asset/img/main/spr_mainWay.png);
+    background-position: 0 0;
+    margin-bottom: 10px;
+}
+#section4Box3 > li:nth-child(3) > div:nth-child(2){
+    text-align: center;
+    font-size: 18px;
+}
+#section4Box3 > li:nth-child(3){
+    margin-right: 0;
+}
+#section4Box4{
+    width: 100%;
+    height: 340px;
+    background: lightgoldenrodyellow;
+}
+
+
+#footer1{
+    height: 60.8px;
+    background: #000;
+    color: white;
+}
+#footer1Inner{
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+#footer1Box1{
+    width: 621px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#footer1Box1 > li{
+    width: fit-content;
+    height: 100%;
+}
+#footer1Box2{
+    width: 391.4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#footer1Box2 > li{
+    width: fit-content;
+    height: 100%;
+    font-size: 14px;
+    color: #ddd;
+}
+
+#footer2{
+    height: 59px;
+    background: #31354e;
+}
+#footer2Inner{
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+#footer2Inner > li{
+    width: fit-content;
+    color: #ddd;
+}
+
+
+#footer3{
+    background: #31354e;
+    height: 137.8px;
+}
+#footer3Inner{
+    width: 1100px;
+    margin: 0 auto;
+    padding: 26px 0 60px 0;
+    color: white;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+}
+#footer3Box1 > li:nth-child(1){
+    display: flex;
+    margin-bottom: 5px;
+}
+#footer3Box1 > li:nth-child(1) > div{
+    width: fit-content;
+    margin-right: 15px;
+}
+#footer3Box2{
+    display: flex;
+}
+#footer3Box2 > li{
+    width: 144px;
+    height: 32px;
+    margin-right: 20px;
+}
+#footer3Box2 > li:nth-child(1){
+    background-image: url(https://www.snuh.org/asset/img/common/spr_common.png);
+    background-position: -124 -176px;
+}
+#footer3Box2 > li:nth-child(2){
+    width: 133px;
+    background-image: url(https://www.snuh.org/asset/img/common/spr_common.png);
+    background-position: 0 -91px;
+}
+#footer3Box2 > li:nth-child(3){
+    width: 129px;
+    background-image: url(https://www.snuh.org/asset/img/common/spr_common.png);
+    background-position: -337px -160px;
+    margin-right: 0;
+}

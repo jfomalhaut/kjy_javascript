@@ -1,0 +1,9 @@
+
+
+import Page1 from './Page1/Page1';
+import Page2 from './Page2/Page2';
+import Calc from './Calc/Calc';
+
+export{
+    Page1, Page2, Calc
+}
