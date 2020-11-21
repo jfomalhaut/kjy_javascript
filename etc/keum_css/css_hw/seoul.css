@@ -60,6 +60,7 @@
     position: sticky;
     top: 0;
     background: white;
+    /* position: relative; */
 }
 #header2Inner{
     width: 1100px;
@@ -67,6 +68,7 @@
     display: flex;
     justify-content: space-between;
 }
+
 #header2MenuIcon{
     width: 30px;
     height: 80px;
@@ -80,11 +82,35 @@
     height: 22px;
 }
 #header2MenuList{
-    display: flex;
+    /* display: flex; */
+    /* background: red; */
     height: 80px;
     flex-grow: 1;
+    
 }
-#header2MenuList > li{
+#header2Bg{
+    background: white;
+    width: 100%;
+    height: 270px;
+    position: absolute;
+    top: 80px;
+    z-index: -1;
+    display: none;
+    /* transition: 0.5s; */
+}
+
+#header2MenuListUl{
+    display: flex;
+    /* transition: 0.5s; */
+}
+#header2 #header2MenuListUl:hover + #header2Bg{
+    display: block;
+    /* transition: 0.5s; */
+}
+#header2MenuListUl:hover .header2SubMenu{
+    display: block;
+}
+#header2MenuListUl > li{
     margin: 0 auto;
     width: fit-content;
     height: 100%;
@@ -93,6 +119,12 @@
     line-height: 60px;
     text-align: center;
 }
+#header2MenuListUl > li > .header2SubMenu{
+    z-index: 1;
+    display: none;
+    transition: 0.5s;
+}
+
 #header2SearchIcon{
     width: 31px;
     height: 80px;

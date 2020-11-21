@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
 import { Navigation } from './components';
-import { Page1, Page2, SignUp, Page3, Juso } from './routers';
+import { Page1, Page2, SignUp, Page3, Juso, Juso2 } from './routers';
 
 function App(){
     return (
@@ -15,7 +15,8 @@ function App(){
                 <Route path="/page3/:id" component={Page3}/>
                 <Route path="/signup" component={SignUp} />
                 <Route path="/juso" component={Juso} />
-                <Redirect to="/juso" />
+                <Route path="/juso2" component={Juso2} />
+                <Redirect to="/juso2" />
             </Switch>
         </Router>
     );
