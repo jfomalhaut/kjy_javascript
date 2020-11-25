@@ -1,13 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
+import { createGlobalStyle } from 'styled-components';
 import { Navigation } from './components';
-import { Juso, Page1, Page2, Signup } from './routers';
+import { Book, Book2, Items, Juso, Page1, Page2, Signup } from './routers';
 
 function App() {
 	
 	return (
 		<Router>
-			<Navigation />
+			{/* <Navigation /> */}
+			<GlobalStyles />
 			<Switch>
 				<Route path="/page1" render={(props) => (
 					<Page1 history={props.history} />
@@ -15,10 +17,18 @@ function App() {
 				<Route path="/page2/:name" component={Page2} />
 				<Route path="/signup" component={Signup} />
 				<Route path="/juso" component={Juso} />
-				<Redirect to="/juso" />
+				<Route path="/book" component={Book} />
+				<Route path="/book2" component={Book2} />
+				<Route path="/items/:type" component={Items} />
+				<Redirect to="/book2" />
 			</Switch>
 		</Router>
 	);
 };
 
 export default App;
+
+const GlobalStyles = createGlobalStyle`
+	* { margin: 0; padding: 0; user-select: none; box-sizing: border-box; list-style: none; }
+	body { background-color: #f9f9f9; }
+`;
