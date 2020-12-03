@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
-import SignUp from './SignUp';
+
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import { Main, AddNum, Juso, Items, Book } from './routers';
 
 
-class App extends Component {
-    
-    handleCreate = (data) => {
-        console.log(data);
-    }
-
-    render(){
-        return(
-            <div>
-                <SignUp onCreate={this.handleCreate} />
-            </div>
-        );
-    }
+const App = () =>{
+    return(
+        <Router>
+            <Switch>
+                <Route path="/main/:id" component={Main}/>
+                <Route path="/addNum" component={AddNum}/>
+                <Route path="/juso" component={Juso}/>
+                <Route path="/items/:type" component={Items}/>
+                <Route path="/book" component={Book}/>
+            </Switch>
+        </Router>
+    );
 }
 
 

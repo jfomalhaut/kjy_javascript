@@ -1,17 +1,12 @@
-const Dotenv = require('dotenv-webpack');
 module.exports = {
     entry: [
         "./src/index.js"
     ],
 
-    plugins: [
-        new Dotenv()
-    ],
-
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
+                test: /\.(js|\jsx)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
@@ -22,27 +17,28 @@ module.exports = {
                 }
             },
             {
-                test: /\.html$/,
+                test: /\.(pdf|jpg|png|gif|svg|ico|jpeg)$/,
                 use: [
                     {
-                        loader: "html-loader",
-                        options: {minimize: true}
+                        loader: "url-loader",
+                        options: {
+                            limit: 10000,
+                            fallback: "file-loader",
+                            name: "assets/images/[name],[ext]"
+                        }
                     }
                 ]
             },
             {
-                test: /\.css$/,
-                use: ["style-loader"]
-            },
-            {
-                test: /\.css$/,
-                use: ["css-loader"]
-            } 
+                test: /\.(css)$/,
+                exclude: /node_modules/,
+                use: ["style-loader", "css-loader"]
+            }
         ]
     },
 
     resolve: {
-        extensions: ["*", ".js"]
+        extensions: ["*", ".js", "jsx"]
     },
 
     output: {

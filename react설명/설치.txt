@@ -6,7 +6,7 @@
 
 4. npm 명령어
     [webpack 관련 설치]
-    npm i -D webpack webpack-cli@3.3.12 webpack-dev-server
+    npm i -D webpack webpack-cli webpack-dev-server
 
     [babel 관련]
     npm i -D babel-loader @babel/core @babel/preset-env @babel/preset-react
@@ -14,18 +14,14 @@
     [react 관련]
     npm i -s react react-dom react-router-dom
 
-    1) 삭제
-    $ npm rm webpack-cl
-
-    2) 재설치
-    $ npm i -D webpack-cli
+    
 
 5. package.json에 
     1) babel 추가
     2) script, start 만들기
 
      "scripts": {
-        "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+        "start": "webpack serve --config ./webpack.config.js --mode development",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
@@ -40,3 +36,6 @@
 
 6. component, dist, src, routers  폴더 생성 
 7. dist/index.html  src/App.js, index.js 파일 
+
+8. redux 설치
+npm i react-redux redux
