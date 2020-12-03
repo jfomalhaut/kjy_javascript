@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 import { Navigation } from './components';
-import { Book, Book2, Items, Juso, Page1, Page2, Signup } from './routers';
+import { Book, Book2, Counter, Items, Juso, Page1, Page2, Signup } from './routers';
 
 function App() {
 	
@@ -17,10 +17,11 @@ function App() {
 				<Route path="/page2/:name" component={Page2} />
 				<Route path="/signup" component={Signup} />
 				<Route path="/juso" component={Juso} />
+				<Route path="/counter" component={Counter} />
 				<Route path="/book" component={Book} />
 				<Route path="/book2" component={Book2} />
 				<Route path="/items/:type" component={Items} />
-				<Redirect to="/book2" />
+				<Redirect to="/counter" />
 			</Switch>
 		</Router>
 	);
