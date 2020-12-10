@@ -1,5 +1,6 @@
 import CounterAction from './CounterAction';
+import CartAction from './CartAction';
 
 export {
-	CounterAction
+	CounterAction, CartAction
 };

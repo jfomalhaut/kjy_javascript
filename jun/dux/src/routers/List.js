@@ -12,7 +12,7 @@ const List = () => {
 	return (
 		<div>
 			<h1>List Component</h1>
-			<button onClick={increase}>increase</button>
+			
 		</div>
 	);
 };
