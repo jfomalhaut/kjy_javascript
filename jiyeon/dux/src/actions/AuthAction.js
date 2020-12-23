@@ -3,11 +3,11 @@ const LOGOUT = "LOGOUT";
 const SIGNIN_SUCESS = "SIGNIN_SUCESS";
 const SIGNIN_FAILURE = "SIGNIN_FAILURE";
 
-const signInDispatch = (payload) => ({ type: SIGNIN, payload });
-const signInSucess = (userInfo) => ({type: SIGNiN_SUCESS, userInfo });
+const signIn = (payload) => ({ type: SIGNIN, payload });
+const signInSucess = (userInfo) => ({type: SIGNIN_SUCESS, userInfo });
 const signInFailure = () => ({ type: SIGNIN_FAILURE });
-const logoutDispatch = () => ({ type: LOGOUT });
+const logout = () => ({ type: LOGOUT });
 
 export default{
-    SIGNIN, LOGOUT, signInDispatch, logoutDispatch, signInSucess, signInFailure
+    SIGNIN, LOGOUT, signIn, logout, signInSucess, signInFailure
 }
