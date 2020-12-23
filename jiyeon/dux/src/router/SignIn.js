@@ -22,8 +22,7 @@ const SignIn = () => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        const payload = { id, pw };
-        console.log(payload);
+        const payload = { username: id, password: pw };
 
         dispatch(AuthAction.signIn(payload));
         // Axios.post('http://localhost:4000/api/signIn', payload)
