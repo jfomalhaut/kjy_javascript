@@ -11,9 +11,9 @@ const App = () => {
 
     return(
         <BrowserRouter>
-            <Link to="/list">list page</Link>
+            {/* <Link to="/list">list page</Link>
             <Link to="/detail">detail page</Link>
-            <h1>Count: {count}</h1>
+            <h1>Count: {count}</h1> */}
             <Switch>
                 <Route path="/detail" component={Detail}/>
                 <Route path="/list" component={List}/>

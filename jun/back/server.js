@@ -20,8 +20,9 @@ function finaly(req, res, next) {
 	`);
 }
 
-app.use(express.static(path.join(__dirname, './public')));
-app.get('*', (req, res, next) => {
+app.use(express.static(path.join(__dirname, './public')));// 외부에서 접근할 수 있게 '/'
+
+app.get('*', (req, res, next) => {//url 겹칠 때 
 	res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
 });
 
