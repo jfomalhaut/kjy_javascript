@@ -9,5 +9,5 @@ const signInFailure = () => ({ type: SIGNIN_FAILURE });
 const logout = () => ({ type: LOGOUT });
 
 export default{
-    SIGNIN, LOGOUT, signIn, logout, signInSucess, signInFailure
+    SIGNIN, LOGOUT, SIGNIN_SUCESS, SIGNIN_FAILURE, signIn, logout, signInSucess, signInFailure
 }

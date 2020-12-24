@@ -1,6 +1,6 @@
 import Axios from 'axios';
 import { AuthAction } from '../actions';
-import { call, put, takeLatest } from 'redux-saga/effects';
+import { call, put, takeEvery } from 'redux-saga/effects';
 
 function* signin(action) {
     try {
@@ -11,11 +11,11 @@ function* signin(action) {
         } else { //비번이 틀렸을 때
             throw false;
         }
-    } catch(error) {
+    } catch (error) {
         yield put(AuthAction.signInFailure());
     }
 }
 
 export default function* watchSignin() { 
-    yield takeLatest(AuthAction.SIGNIN, signin);
+    yield takeEvery(AuthAction.SIGNIN, signin);
 };
