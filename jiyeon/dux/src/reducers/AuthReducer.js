@@ -23,7 +23,6 @@ const AuthReducer = (state = initialState, action) => {
                 failure: 0
             }
         }
-
         case AuthAction.SIGNIN_FAILURE: {
             console.log('SIGNIN_FAILURE');
             return {
