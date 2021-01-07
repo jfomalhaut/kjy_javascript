@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import Axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { AuthAction } from '../actions';
 
 const Signin = () => {
+	const dispatch = useDispatch();
 	const [info, setInfo] = useState({ username: '', password: '' });
 	const { username, password } = info;
 
@@ -16,22 +18,7 @@ const Signin = () => {
 	const signin = (ev) => {
 		ev.preventDefault();
 		const payload = { username, password };
-		console.log(payload);
-		
-		Axios.post('http://localhost:4000/api/signin', payload).then(res => {
-			const { status, data: { valid, userinfo } } = res;
-			if (status === 200) {
-				if (valid) {
-					alert(`환영합니다, ${userinfo.username}님!`);
-				} else {
-					alert('일치하는 정보가 없습니다');
-				}
-			} else {
-				alert('네크워크 오류 발생!');
-			}
-		}).catch(error => {
-			console.log(error);
-		});
+		dispatch(AuthAction.signIn(payload));
 	};
 
 	return (

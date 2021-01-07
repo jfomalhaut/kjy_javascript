@@ -1,0 +1,27 @@
+<html>
+<body>
+	<button onclick="login()">
+		<h1>SignIn</h1>
+	</button>
+	<script>
+
+		const LOGIN = 'LOGIN';
+
+		function login() {
+			const payload = {
+				username: 'dlwnssla',
+				password: 'dlwns123' 
+			};
+			dispatch(signIn(payload));
+		}
+
+		const signIn = (payload) => ({ type: LOGIN, payload });
+
+		function dispatch(action) {
+			console.log(action);
+		}
+
+
+	</script>
+</body>
+</html>

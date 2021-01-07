@@ -6,7 +6,8 @@ import Items from './Items/Items';
 import Book from './Book/Book';
 import Book2 from './Book/Book2';
 import Counter from './Counter/Counter';
+import Load from './Load/Load';
 
 export {
-	Page1, Page2, Signup, Juso, Counter, Book2, Book, Items
+	Page1, Page2, Signup, Juso, Counter, Book2, Book, Items, Load
 };

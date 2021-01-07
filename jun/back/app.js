@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const app = express();
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 4000;
@@ -24,6 +25,8 @@ app.post('/api/signin', (req, res) => {
 		res.send({ valid: false });
 	}
 });
+
+app.use(express.static(path.join(__dirname, './public')));
 
 app.listen(PORT, () => {
 	console.log(`EXPRESS SERVER PORT NUMBER IS ${PORT}`);
